@@ -388,7 +388,7 @@ export default function Sections() {
             </Stack>
           </Stack>
           <Grid container spacing={1.5}>
-            {filterSections.map((item, index) => (
+            {filterSections.slice(0, 3).map((item, index) => (
               <Grid key={index} size={{ xs: 6, sm: 4, md: 4 }}>
                 <GraphicsCard sx={{ overflow: 'hidden', WebkitTapHighlightColor: 'transparent' }}>
                   <motion.div

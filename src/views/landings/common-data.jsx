@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import branding from '@/branding.json';
 import { Themes } from '@/config';
 import { MegaMenuType } from '@/enum';
-import { ADMIN_PATH, BUY_NOW_URL, DOCS_URL, PAGE_PATH, PRIVIEW_PATH } from '@/path';
+import { ADMIN_PATH, BUY_NOW_URL, DOCS_URL, PAGE_PATH, PRIVIEW_PATH, SECTION_PATH } from '@/path';
 
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 
@@ -20,7 +20,7 @@ function footerData() {
     <Stack direction={{ sm: 'row' }} sx={{ gap: 1.5, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' } }}>
       <Stack sx={{ gap: 1 }}>
         <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
-          <Typography variant="h5">Novas demos de landing em breve!</Typography>
+          <Typography variant="h5">Novos plugins em breve!</Typography>
           <Chip
             label={<Typography variant="caption">Em Breve</Typography>}
             size="small"
@@ -41,17 +41,16 @@ function footerData() {
           />
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          O SaasAble oferece mais de 200 blocos personalizáveis, permitindo que você crie e desenvolva landing pages sob medida para o seu produto ou serviço com facilidade.
-        </Typography>
+         Nossos plugins oferecem recursos exclusivos para personalizar seu AIFit, permitindo que você adicione soluções sob medida para seus clientes de forma simples e eficiente. </Typography>
       </Stack>
       <Button
         variant="contained"
         sx={{ display: { xs: 'none', sm: 'inline-flex' }, minWidth: 100, px: { xs: 2 }, py: 1.25 }}
-        href={BUY_NOW_URL}
+        href={SECTION_PATH}
         target="_blank"
         rel="noopener noreferrer"
       >
-        Adquira Agora!
+        Acessar!
       </Button>
     </Stack>
   );
@@ -61,53 +60,29 @@ function footerData() {
 
 export const landingMegamenu = {
   id: 'landings',
-  title: 'Landings',
+  title: 'Plugins',
   megaMenu: {
     type: MegaMenuType.MEGAMENU4,
     popperOffsetX: 195,
-    toggleBtn: { children: 'Landings' },
+    toggleBtn: { children: 'Plugins' },
     menuItems: [
       {
-        title: 'CRM',
+        title: 'Contador de calorias',
         theme: Themes.THEME_CRM,
         image: '/assets/images/mega-menu/crm-light.svg',
-        status: 'Pro'
+        status: '⌛'
       },
       {
-        title: 'AI',
+        title: 'Meus Cupons',
         theme: Themes.THEME_AI,
         image: '/assets/images/mega-menu/ai-light.svg',
-        status: 'Pro'
+        status: '⌛'
       },
       {
-        title: 'Crypto',
+        title: 'Vídeos tutoriais',
         theme: Themes.THEME_CRYPTO,
         image: '/assets/images/mega-menu/crypto-light.svg',
-        status: 'Pro'
-      },
-      {
-        title: 'Hosting',
-        theme: Themes.THEME_HOSTING,
-        image: '/assets/images/mega-menu/hosting-light.svg',
-        status: 'Pro'
-      },
-      {
-        title: 'PMS',
-        theme: Themes.THEME_PMS,
-        image: '/assets/images/mega-menu/pms-light.svg',
-        status: 'Pro'
-      },
-      {
-        title: 'HRM',
-        theme: Themes.THEME_HRM,
-        image: '/assets/images/mega-menu/hrm-light.svg',
-        status: 'Pro'
-      },
-      {
-        title: 'Plugin',
-        theme: Themes.THEME_PLUGIN,
-        image: '/assets/images/mega-menu/plugin-light.svg',
-        status: 'Pro'
+        status: '⌛'
       }
     ],
     footerData: footerData()

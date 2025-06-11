@@ -22,7 +22,6 @@ import Box from '@mui/material/Box';
 import ContainerWrapper from './ContainerWrapper';
 import SvgIcon from './SvgIcon';
 
-import { getBackgroundDots } from '@/utils/getBackgroundDots';
 import { PAGE_PATH } from '@/path';
 
 // @assets
@@ -88,7 +87,7 @@ export default function SectionHero({ heading, search = true, offer = false, bre
       sx={{
         overflow: 'hidden',
         py: { xs: 3, sm: 5, md: 8 },
-        backgroundImage: "url('/assets/images/graphics/ai/backgorund.jpg')",
+        backgroundImage: "url('/images/graphics/overlay9.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         bgcolor: 'grey.100',

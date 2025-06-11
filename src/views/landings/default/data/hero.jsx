@@ -30,8 +30,8 @@ export const hero = {
       </>
     )
   },
-  headLine: 'Kit de UI e Template de Dashboard Multiuso',
-  captionLine: 'Crie páginas de marketing e dashboards administrativos poderosos com facilidade usando nosso Kit de UI, desenvolvido seguindo as diretrizes do Material 3.',
+  headLine: 'Personalize protocolos do seu jeito com inteligência artificial e sem perder seu toque.',
+  captionLine: 'Automatize seu atendimento, escale seu serviço e entregue protocolos com a sua identidade, em segundos.',
   primaryBtn: { children: 'Explorar Blocos', href: SECTION_PATH },
   videoSrc: '/assets/videos/thumbnails/intro.mp4',
   videoThumbnail: '/assets/videos/thumbnails/intro-thumbnail.png'

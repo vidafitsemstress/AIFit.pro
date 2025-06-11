@@ -3,30 +3,30 @@ import SvgIcon from '@/components/SvgIcon';
 import { DOCS_URL } from '@/path';
 
 export const integration = {
-  headLine: 'Tailored for Every Industry',
-  captionLine: 'From Project Management to AI, see how our UI Kit helps you build SaaS applications tailored for a variety of industries.',
+  headLine: 'Todos estes recursos para você',
+  captionLine: 'Da automação à gestão, veja como nosso sistema conecta nutrição, treino, atendimento e performance em um só lugar.',
   primaryBtn: {
-    children: 'Documentation',
+    children: 'Adquire Agora!',
     startIcon: <SvgIcon name="tabler-help" color="background.default" />,
     href: DOCS_URL,
     target: '_blank',
     rel: 'noopener noreferrer'
   },
   tagList: [
-    { label: 'Project Management' },
-    { label: 'Customer Relationship Management (CRM)' },
-    { label: 'HR & Recruitment' },
-    { label: 'Finance & Accounting' },
-    { label: 'E-commerce Solutions' },
-    { label: 'Marketing Automation' },
-    { label: 'Healthcare & Telemedicine' },
-    { label: 'LMS' },
-    { label: 'AI & ML Platforms' },
-    { label: 'Inventory & Supply Chain Management' },
-    { label: 'Customer Support & Help Desk' },
-    { label: 'Email Marketing and SEO Tools' },
-    { label: 'Networking Platforms' },
-    { label: 'Blogging Tools' },
-    { label: 'Data Analytics & Business Intelligence' }
+    { label: 'Gestão de Protocolos de Dieta' },
+    { label: 'Personalização de Treinos' },
+    { label: 'Atendimento Inteligente (Chatbot/WhatsApp)' },
+    { label: 'Gestão de Clientes e Evolução' },
+    { label: 'Painel de Progresso e Resultados' },
+    { label: 'Gestão de Suplementação' },
+    { label: 'Configuração White-label' },
+    { label: 'Automação de Relatórios' },
+    { label: 'Integração com IA para Personalização' },
+    { label: 'Gestão de Templates de Protocolos' },
+    { label: 'Dashboard de Performance' },
+    { label: 'Envio Automático de Planos' },
+    { label: 'Feedback e Adesão dos Clientes' },
+    { label: 'Gestão de Preferências de Coach' },
+    { label: 'Integração com Marketing Digital' }
   ]
 };

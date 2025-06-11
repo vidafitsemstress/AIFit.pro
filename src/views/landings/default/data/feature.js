@@ -72,40 +72,40 @@ export const feature5 = {
 };
 
 export const feature20 = {
-  heading: 'Comprehensive UI Kit Tailored to your Need',
-  caption: 'Ready to transform your SaaS designs with one powerful UI Kit?',
-  actionBtn: { children: 'Buy Now', href: BUY_NOW_URL, ...linkProps },
-  secondaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
+  heading: 'Tudo que você precisa em apenas uma plataforma',
+  caption: 'Pronto para escalar seus atendimentos de forma hiperpersonalizada?',
+  actionBtn: { children: 'Adquire Agora!', href: BUY_NOW_URL, ...linkProps },
+  secondaryBtn: { children: 'Plugins', href: SECTION_PATH },
   features: [
     {
       icon: 'tabler-accessible',
-      title: 'WCAG Compliant',
-      content: 'Ensure accessibility with WCAG compliant design for browsing.'
+      title: 'Planos Gerados por IA em Segundos',
+      content: 'Crie fichas completas de dieta e treino com base em objetivos genéricos (como "emagrecer") ou específicos (como "cutting com treino ABC"). Tudo com o toque da Inteligência Artificial — rápido, preciso e sob medida.'
     },
     {
       icon: 'tabler-brand-google',
-      title: 'SEO Friendly',
-      content: 'Boost visibility with SEO-friendly features for better search rankings.'
+      title: 'Templates Inteligentes que Aprendem com Você',
+      content: 'Salve suas próprias estruturas e deixe a IA aprender seu estilo. A cada novo cliente, ela sugere ajustes personalizados com base nas suas preferências e histórico.'
     },
     {
       icon: 'tabler-stack-2',
-      title: 'MUI Components',
-      content: 'Customize Material 3 design MUI components for enhanced aesthetics.'
+      title: 'Envio Automático via WhatsApp',
+      content: 'Gere o plano e envie direto no WhatsApp do cliente em formato de texto, imagem ou PDF. Mais agilidade, menos retrabalho e um atendimento digital e moderno.'
     },
     {
       icon: 'tabler-rocket',
-      title: 'High Performance UI',
-      content: 'Adjust content layout for visual coherence on various screen sizes.'
+      title: 'Feedback e Adaptação Contínua com IA',
+      content: 'Acompanhe adesão ao plano, evolução corporal e respostas do cliente em tempo real. A IA analisa esses dados e ajuda você a adaptar as fichas conforme a resposta fisiológica.'
     },
     {
       icon: 'tabler-help',
-      title: 'Detailed Documentation',
-      content: 'Access comprehensive documentation for easy guidance on platform usage.'
+      title: 'Escale Seu Atendimento com IA',
+      content: 'Atenda 3x mais clientes com a mesma qualidade. A AIFit.pro automatiza o que é repetitivo, acelera o que é técnico e mantém você no controle do estratégico. Menos tempo criando planos, mais tempo crescendo o seu negócio.'
     },
     {
       icon: 'tabler-refresh',
       title: 'Regular Updates',
-      content: 'Receive consistent updates to keep the platform secure and up-to-date with the latest features.'
+      content: 'Veja a performance de cada cliente e da sua operação. Métricas de resultado, evolução nutricional e física — tudo em um painel intuitivo.'
     }
   ]
 };

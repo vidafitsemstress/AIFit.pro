@@ -18,9 +18,8 @@ export const navbar = {
   navItems: [
     { id: 'home', title: 'Home', link: '/' },
     landingMegamenu,
-    { id: 'components', title: 'Blocks', link: SECTION_PATH },
-    { id: 'dashboard', title: 'Dashboard', link: ADMIN_PATH, ...linkProps },
-    pagesMegamenu,
-    { id: 'docs', title: 'Docs', link: DOCS_URL, ...linkProps, icon: 'tabler-pin-invoke' }
+    { id: 'dashboard', title: 'Quem somos', link: ADMIN_PATH, ...linkProps },
+    { id: 'how', title: 'Como funciona', link: 'https://stage.saasable.io/about', ...linkProps },
+    { id: 'docs', title: 'Acessar AIFit.pro', link: DOCS_URL, ...linkProps, icon: 'tabler-pin-invoke' }
   ]
 };
