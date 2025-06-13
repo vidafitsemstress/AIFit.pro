@@ -52,7 +52,7 @@ function footerData() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Buy Now
+        Adquire agora!
       </Button>
     </Stack>
   );

@@ -124,11 +124,11 @@ export default function Feature20({ heading, caption, image, features, actionBtn
                       ...(!indicesOfLastElements.includes(index) && { borderRight: `1px solid ${theme.palette.grey[300]}` })
                     }}
                   >
-                    <Stack sx={{ gap: { xs: 3, sm: 4 }, height: 1, py: { xs: 1.5, sm: 3, md: 4 }, px: { xs: 0, sm: 3, md: 4 } }}>
-                      <Avatar sx={{ width: 60, height: 60, bgcolor: 'grey.300' }}>
-                        <SvgIcon {...(typeof item.icon === 'string' ? { name: item.icon } : { ...item.icon })} />
-                      </Avatar>
-                      <Stack sx={{ gap: { xs: 0.5, md: 1 } }}>
+                    <Stack sx={{ gap: { xs: 3, sm: 4 }, height: 1, py: { xs: 1.5, sm: 3, md: 4 }, px: { xs: 0, sm: 3, md: 4 },alignItems: 'center' }}>
+<Avatar sx={{ width: 160, height: 160, bgcolor: 'grey.300', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+<Box component="img" src={`/assets/images/images/Image (${index + 1}).png`} alt={item.title} sx={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+</Avatar>
+                      <Stack sx={{ gap: { xs: 0.5, md: 1 },textAlign: 'center' }}>
                         {item.title && <Typography variant="h4">{item.title}</Typography>}
                         {item.content && <Typography sx={{ color: 'text.secondary' }}>{item.content}</Typography>}
                       </Stack>
@@ -179,7 +179,7 @@ export default function Feature20({ heading, caption, image, features, actionBtn
                     variant="contained"
                     color="primary"
                     startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
-                    {...actionBtn}
+                    ///{...actionBtn}
                   />
                 </ButtonAnimationWrapper>
               )}

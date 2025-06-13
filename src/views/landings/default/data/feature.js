@@ -75,7 +75,7 @@ export const feature20 = {
   heading: 'Tudo que você precisa em apenas uma plataforma',
   caption: 'Pronto para escalar seus atendimentos de forma hiperpersonalizada?',
   actionBtn: { children: 'Adquire Agora!', href: BUY_NOW_URL, ...linkProps },
-  secondaryBtn: { children: 'Plugins', href: SECTION_PATH },
+  // secondaryBtn: { children: 'Plugins', href: SECTION_PATH },
   features: [
     {
       icon: 'tabler-accessible',
@@ -113,13 +113,13 @@ export const feature20 = {
 export const feature21 = {
   heading: `Design Faster, Smarter with ${branding.brandName} Figma`,
   caption: 'Unlock Figma’s advanced tools for streamlined, scalable, and responsive SaaS UI design.',
-  image: '/assets/images/graphics/ai/desktop1-light.svg',
-  primaryBtn: { children: 'Free Figma', href: 'https://www.figma.com/community/file/1425095061180549847', ...linkProps },
-  secondaryBtn: {
+// image: '/assets/images/graphics/ai/desktop1-light.svg',
+  // primaryBtn: { children: 'Free Figma', href: 'https://www.figma.com/community/file/1425095061180549847', ...linkProps },
+ /* secondaryBtn: {
     children: 'Preview Pro Figma',
     href: 'https://www.figma.com/design/mlkXfeqxUKqIo0GQhPBqPb/SaasAble---UI-Kit---Preview-only?node-id=11-1833&t=JBHOIIEuYZpmN6v8-1',
     ...linkProps
-  },
+  },*/
   features: [
     {
       animationDelay: 0.1,
@@ -262,18 +262,18 @@ export const feature23 = {
 };
 
 export const feature18 = {
-  heading: 'Powerful Admin Interface',
-  caption: 'Manage data, users, and workflows effortlessly with intuitive, customizable admin controls and features.',
+  heading: 'Administre clientes ponta a ponta.',
+  caption: 'AIFit.pro oferece uma poderosa ferramenta de administração ponta a ponta, permitindo que você gerencie seus clientes com eficiência, controle total e escalabilidade.',
   topics: [
     {
       icon: 'tabler-sparkles',
-      title: 'Material UI Powered',
+      title: 'Gerencie seus Clientes',
       title2: 'Leverage Power of Material UI Components',
       description: 'The power and flexibility of Material UI components in admin template',
       image: '/assets/images/graphics/default/admin-dashboard.png',
       list: [
         { primary: 'Next.js JavaScript/TypeScript' },
-        { primary: 'Customizable Themes' },
+        { primary: 'Customize seus protocolos automaticamente' },
         { primary: 'Rich Form and Table Components' },
         { primary: 'Responsive Grid System' }
       ],
@@ -282,7 +282,7 @@ export const feature18 = {
     },
     {
       icon: 'tabler-palette',
-      title: 'Customizable Themes',
+      title: 'Customize seus protocolos',
       title2: 'Flexible Theming Options',
       description: 'Tailor themes effortlessly with MUI 7 robust theming system.',
       image: '/assets/images/graphics/default/admin-dashboard-2.png',
@@ -297,7 +297,7 @@ export const feature18 = {
     },
     {
       icon: 'tabler-rocket',
-      title: 'Faster Development',
+      title: 'Desenvola protocolos com IA',
       title2: 'Rapid Development',
       description: 'Launch projects quicker with pre-built layouts and components.',
       image: '/assets/images/graphics/default/admin-dashboard-3.png',
@@ -312,7 +312,22 @@ export const feature18 = {
     },
     {
       icon: 'tabler-scale',
-      title: 'Scalability',
+      title: 'Aumente suas Vendas',
+      title2: 'Build to Scale',
+      description: 'Easily scale your app with flexible, modular, and extensible templates.',
+      image: '/assets/images/graphics/default/admin-dashboard.png',
+      list: [
+        { primary: 'Modular Architecture' },
+        { primary: 'Performance Optimized' },
+        { primary: 'Extensible Codebase' },
+        { primary: 'Future Proof Design' }
+      ],
+      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
+      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
+    },
+    {
+      icon: 'tabler-scale',
+      title: 'Escale utilizando Whatsapp',
       title2: 'Build to Scale',
       description: 'Easily scale your app with flexible, modular, and extensible templates.',
       image: '/assets/images/graphics/default/admin-dashboard.png',

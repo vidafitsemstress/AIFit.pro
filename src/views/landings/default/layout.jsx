@@ -18,14 +18,14 @@ export default function MainLayout({ children }) {
   return (
     <>
       {/* header section */}
-      <Box sx={{ bgcolor: 'grey.100' }}>
+      <Box sx={{ bgcolor: 'grey.100', position: 'fixed', top: 0, width: '100%', zIndex: (theme) => theme.zIndex.appBar }}>
         <Navbar10>
           <NavbarContent10 {...navbar} />
         </Navbar10>
       </Box>
-      {/* app/(landing)/* */}
-      {children}
-      {/* footer section */}
+      <Box sx={{ mt: { xs: 8, md: 10 } }}>
+        {children}
+      </Box>
       <Footer7 />
     </>
   );

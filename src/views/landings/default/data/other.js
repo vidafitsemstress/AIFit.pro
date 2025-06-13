@@ -8,51 +8,31 @@ const imagePrefix = '/assets/images/presentation';
 import branding from '@/branding.json';
 
 export const other = {
-  heading: `${branding.brandName} Blocks `,
-  description: 'Explore a wide range of ready-made blocks—from Hero to CTA, Features, and more to speed up your design process.',
-  primaryBtn: { children: 'Explore all Blocks', href: SECTION_PATH },
+   heading: `${branding.brandName} Plugins `,
+   description: 'Em breve, plugins para ampliar as funcionalidades do seu AIFit.',
+   primaryBtn: { children: 'Acessar plugins', href: SECTION_PATH },
+  
   sections: [
     {
       animationDelay: 0.2,
-      title: 'Hero',
-      subTitle: '17 Different Variants',
-      image: `${imagePrefix}/hero-light.svg`,
+      title: 'Contador de Calorias',
+      subTitle: 'Utilize recursos tecnologicos para ajudar a contabilizar as calorias ingeridas',
+      image: '/assets/images/images/Imagem (7).png',
       link: PAGE_PATH.hero
     },
     {
       animationDelay: 0.3,
-      title: 'Call to Action',
-      subTitle: '12 Different Variants',
-      image: `${imagePrefix}/cta-light.svg`,
+      title: 'Meus Cupons',
+      subTitle: 'Organize e divulgue seus cupons e escale sua componha sua receita.',
+      image: '/assets/images/images/Imagem (8).png',
       link: PAGE_PATH.cta
     },
     {
       animationDelay: 0.4,
-      title: 'Feature',
-      subTitle: '23 Different Variants',
-      image: `${imagePrefix}/feature-light.svg`,
+      title: 'Vídeos tutoriais',
+      subTitle: 'Insira vídeos tutoriais e proporcione uma experiência de execução excepcional aos seus clientes com AIFit.pro.',
+      image: '/assets/images/images/Imagem (9).png',
       link: PAGE_PATH.feature
-    },
-    {
-      animationDelay: 0.2,
-      title: 'Benefits',
-      subTitle: '9 Different Variants',
-      image: `${imagePrefix}/benefits-light.svg`,
-      link: PAGE_PATH.benefit
-    },
-    {
-      animationDelay: 0.3,
-      title: 'Process',
-      subTitle: '7 Different Variants',
-      image: `${imagePrefix}/process-light.svg`,
-      link: PAGE_PATH.process
-    },
-    {
-      animationDelay: 0.4,
-      title: 'Integration',
-      subTitle: '8 Different Variants',
-      image: `${imagePrefix}/integration-light.svg`,
-      link: PAGE_PATH.integration
     }
   ]
 };

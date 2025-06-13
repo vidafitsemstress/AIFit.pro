@@ -39,6 +39,9 @@ export default function Benefit5({ heading, caption, blockDetail }) {
             }}
           />
         </motion.div>
+
+        {/* Cards section commented out to hide benefit cards */}
+        {/*
         <Grid container spacing={1.5}>
           {blockDetail.map((item, index) => (
             <Grid key={index} size={{ xs: 6, md: 3 }}>
@@ -72,6 +75,7 @@ export default function Benefit5({ heading, caption, blockDetail }) {
             </Grid>
           ))}
         </Grid>
+        */}
       </Stack>
     </ContainerWrapper>
   );

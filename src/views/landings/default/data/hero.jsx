@@ -3,12 +3,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
 import { SECTION_PATH } from '@/path';
+
 export const hero = {
   chip: {
     label: (
       <>
         <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-          Um Kit, Infinitas
+          Sua solução com infinitas
         </Typography>
         <Chip
           label={
@@ -16,7 +17,13 @@ export const hero = {
               Possibilidades
             </Typography>
           }
-          sx={{ height: 24, bgcolor: 'primary.lighter', mr: -1, ml: 0.75, '& .MuiChip-label': { px: 1.25 } }}
+          sx={{
+            height: 24,
+            bgcolor: 'primary.lighter',
+            mr: -1,
+            ml: 0.75,
+            '& .MuiChip-label': { px: 1.25 }
+          }}
           icon={
             <CardMedia
               component="img"
@@ -32,11 +39,10 @@ export const hero = {
   },
   headLine: 'Personalize protocolos do seu jeito com inteligência artificial e sem perder seu toque.',
   captionLine: 'Automatize seu atendimento, escale seu serviço e entregue protocolos com a sua identidade, em segundos.',
-  primaryBtn: { children: 'Explorar Blocos', href: SECTION_PATH },
+  // primaryBtn: { children: 'Explorar', href: SECTION_PATH },
   videoSrc: '/assets/videos/thumbnails/intro.mp4',
-  videoThumbnail: '/assets/videos/thumbnails/intro-thumbnail.png'
-  ,
+ // videoThumbnail: '/assets/videos/thumbnails/intro-thumbnail.png',
   listData: [
-    { image: '/assets/images/shared/react.svg', title: 'React 19' }
+   
   ]
 };

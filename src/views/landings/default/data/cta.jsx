@@ -6,35 +6,6 @@ import branding from '@/branding.json';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
-export const cta4 = {
-  headLine: 'Why Trust Phoenixcoded for Your Dashboard Template Needs?',
-  primaryBtn: {
-    children: 'Read Our story',
-    href: 'https://blog.saasable.io/a-decade-of-expertise-the-phoenixcoded-story-and-why-you-should-trust-us',
-    target: '_blank',
-    rel: 'noopener noreferrer'
-  },
-  profileGroups: {
-    avatarGroups: [
-      { avatar: '/assets/images/user/avatar1.png' },
-      { avatar: '/assets/images/user/avatar2.png' },
-      { avatar: '/assets/images/user/avatar3.png' },
-      { avatar: '/assets/images/user/avatar4.png' },
-      { avatar: '/assets/images/user/avatar5.png' }
-    ],
-    review: '250+ Author Reviews (4.65 out of 5)'
-  },
-  list: [
-    { primary: '10+ Years Expertise' },
-    { primary: '8k+ Satisfied Customers' },
-    { primary: 'Elite Envato Author' },
-    { primary: 'Timely Support, Guaranteed' },
-    { primary: 'Regular Updates Provided' },
-    { primary: 'Proven Industry Leader' }
-  ],
-  clientContent: 'Learn More'
-};
-
 function DescriptionLine() {
   return (
     <Typography variant="body2" sx={{ color: 'text.secondary' }}>

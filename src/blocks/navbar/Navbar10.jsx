@@ -11,6 +11,9 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 
 // override media queries injected by theme.mixins.toolbar
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
   '@media all': {
     minHeight: 84,
     paddingLeft: 0,
@@ -36,11 +39,24 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function Navbar10({ children }) {
   return (
-    <ContainerWrapper>
-      <AppBar position="static" color="inherit" elevation={0} sx={{ background: 'transparent' }}>
-        <StyledToolbar>{children}</StyledToolbar>
-      </AppBar>
-    </ContainerWrapper>
+    <AppBar
+      position="fixed"
+      color="inherit"
+      elevation={0}
+      sx={{
+        background: 'transparent',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: (theme) => theme.zIndex.appBar
+      }}
+    >
+      <ContainerWrapper>
+        <StyledToolbar>
+          {children}
+        </StyledToolbar>
+      </ContainerWrapper>
+    </AppBar>
   );
 }
 

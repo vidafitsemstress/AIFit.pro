@@ -1,6 +1,5 @@
 'use client';
 import PropTypes from 'prop-types';
-
 import { useEffect, useRef, useState } from 'react';
 
 // @mui
@@ -30,24 +29,32 @@ import Wave from '@/images/graphics/Wave';
 const options = { root: null, rootMargin: '0px', threshold: 0.6 };
 
 /***************************  HERO - 17  ***************************/
-
-export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoSrc, videoThumbnail, listData }) {
+export default function Hero17({
+  chip,
+  headLine,
+  captionLine,
+  primaryBtn,
+  videoSrc,
+  videoThumbnail,
+  listData
+}) {
   const theme = useTheme();
   const boxRadius = { xs: 24, sm: 32, md: 40 };
 
   const containerRef = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start']
   });
-
-  const scale = useTransform(scrollYProgress, [0, 0.1, 0.2, 0.4, 0.6], [0.9, 0.92, 0.94, 0.96, 1]);
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.4, 0.6],
+    [0.9, 0.92, 0.94, 0.96, 1]
+  );
 
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Handle video play/pause based on intersection with the viewport
   useEffect(() => {
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
@@ -55,33 +62,22 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
           if (videoRef.current && !isPlaying) {
             videoRef.current
               .play()
-              .then(() => {
-                setIsPlaying(true);
-              })
+              .then(() => setIsPlaying(true))
               .catch((error) => {
                 console.error('Autoplay was prevented:', error);
               });
           }
-        } else {
-          if (videoRef.current && isPlaying) {
-            videoRef.current.pause();
-            setIsPlaying(false);
-          }
+        } else if (videoRef.current && isPlaying) {
+          videoRef.current.pause();
+          setIsPlaying(false);
         }
       });
     };
-
     const observer = new IntersectionObserver(handleIntersection, options);
-    const videoElement = videoRef.current;
-
-    if (videoElement) {
-      observer.observe(videoElement);
-    }
-
+    const videoEl = videoRef.current;
+    if (videoEl) observer.observe(videoEl);
     return () => {
-      if (videoElement) {
-        observer.unobserve(videoElement);
-      }
+      if (videoEl) observer.unobserve(videoEl);
     };
   }, [isPlaying]);
 
@@ -100,7 +96,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
           background: getBackgroundDots(theme.palette.grey[300], 60, 35),
           bgcolor: 'grey.100'
         }}
-      ></Box>
+      />
       <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
         <Box ref={containerRef}>
           <Box sx={{ pb: { xs: 3, sm: 4, md: 5 } }}>
@@ -109,11 +105,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.1,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                transition={{ duration: 1, delay: 0.1, ease: [0.215, 0.61, 0.355, 1] }}
               >
                 <Chip
                   variant="outlined"
@@ -129,16 +121,11 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                   sx={{ bgcolor: 'grey.100', '& .MuiChip-label': { py: 0.5, px: 1.5 } }}
                 />
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.2,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                transition={{ duration: 1, delay: 0.2, ease: [0.215, 0.61, 0.355, 1] }}
               >
                 <Typography variant="h1" align="center" sx={{ maxWidth: 800 }}>
                   {headLine}
@@ -148,11 +135,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.2,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                transition={{ duration: 1, delay: 0.2, ease: [0.215, 0.61, 0.355, 1] }}
               >
                 <Box sx={{ pt: 0.5, pb: 0.75 }}>
                   <Wave />
@@ -162,11 +145,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.3,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                transition={{ duration: 1, delay: 0.3, ease: [0.215, 0.61, 0.355, 1] }}
               >
                 <Typography variant="h6" align="center" sx={{ color: 'text.secondary', maxWidth: 650 }}>
                   {captionLine}
@@ -178,30 +157,17 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.4,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                transition={{ duration: 1, delay: 0.4, ease: [0.215, 0.61, 0.355, 1] }}
               >
                 <ButtonAnimationWrapper>
-                  <Button
-                    color="primary"
-                    variant="contained"
-                    startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
-                    {...primaryBtn}
-                  />
+                  <Button color="primary" variant="contained" startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />} {...primaryBtn} />
                 </ButtonAnimationWrapper>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.5,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                transition={{ duration: 1, delay: 0.5, ease: [0.215, 0.61, 0.355, 1] }}
               >
                 <Stack direction="row" sx={{ gap: 1, flexWrap: 'wrap', justifyContent: 'center' }}>
                   {listData.map((item, index) => (
@@ -217,28 +183,9 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
               </motion.div>
             </Stack>
           </Box>
-          <motion.div
-            initial={{ opacity: 0, y: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.5
-            }}
-            style={{ scale }}
-          >
+          <motion.div initial={{ opacity: 0, y: 0 }} whileInView={{ opacity: 1, y: 0 }} style={{ scale }}>
             <GraphicsCard sx={{ border: '5px solid', borderColor: 'grey.300' }}>
-              <video
-                playsInline
-                ref={videoRef}
-                width="100%"
-                height="100%"
-                style={{ display: 'flex', objectFit: 'cover' }}
-                preload="metadata"
-                autoPlay={false}
-                loop={true}
-                muted={true}
-                poster={videoThumbnail}
-              >
+              <video playsInline ref={videoRef} width="100%" height="100%" style={{ display: 'flex', objectFit: 'cover' }} preload="metadata" autoPlay={false} loop muted poster={videoThumbnail}>
                 <source src={videoSrc} type="video/mp4" />
               </video>
             </GraphicsCard>
