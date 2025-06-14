@@ -5,56 +5,57 @@ import { SECTION_PATH, BUY_NOW_URL, ADMIN_PATH, DOCS_URL } from '@/path';
 
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 
+// ===================== Cultura de Inovação =====================
 export const feature2 = {
-  heading: 'Culture of Innovation',
-  caption:
-    'Join a team that embraces forward-thinking ideas, fosters innovation, and cultivates an environment where your creativity can flourish.',
+  heading: 'Cultura de Inovação',
+  caption: 'Na AIFit.pro, acreditamos no poder da tecnologia aliada ao toque humano. Nosso ambiente estimula criatividade, testes e evolução constante.',
   features: [
     {
       icon: { name: 'tabler-users', type: IconType.STROKE, color: 'grey.900', stroke: 1 },
-      title: 'Teamwork',
-      content: 'We embrace varied perspectives and backgrounds, creating an inclusive environment.'
+      title: 'Colaboração',
+      content: 'Conectamos nutrição, educação física e tecnologia em um time multidisciplinar.'
     },
     {
       icon: { name: 'tabler-star', type: IconType.STROKE, color: 'grey.900', stroke: 1 },
-      title: 'Inclusivity',
-      content: 'We embrace varied perspectives and backgrounds, creating an inclusive environment.'
+      title: 'Inclusividade',
+      content: 'Nossa plataforma respeita diferentes estilos de atendimento e formas de trabalho.'
     },
     {
       icon: { name: 'tabler-chart-histogram', type: IconType.STROKE, color: 'grey.900', stroke: 1 },
-      title: 'Growth',
-      content: 'Our culture prioritizes continuous learning, encouraging personal and professional development. '
+      title: 'Evolução Contínua',
+      content: 'Adicionamos melhorias frequentes com base em feedback real dos profissionais.'
     }
   ]
 };
 
+// ===================== Benefícios Além da Plataforma =====================
 export const feature5 = {
-  heading: 'Beyond the 9-to-5',
-  caption: 'Our benefits go beyond the standard, ensuring your life outside of work is just as fulfilling.',
+  heading: 'Muito além da criação de planos',
+  caption: 'Funcionalidades pensadas para facilitar sua rotina e ampliar sua atuação.',
   image1: '/assets/images/graphics/ai/graphics3-light.svg',
   image2: '/assets/images/graphics/ai/graphics2-light.svg',
   features: [
     {
       icon: 'tabler-coin',
-      title: 'Compensation',
-      content: 'Enjoy a competitive salary that recognizes your skills and contributions.'
+      title: 'Monetização Inteligente',
+      content: 'Aproveite cupons, integrações e canais automatizados para gerar receita.'
     },
     {
       icon: 'tabler-health-recognition',
-      title: 'Healthcare',
-      content: "Access to a comprehensive healthcare plan, ensuring you and your family's well-being."
+      title: 'Foco na Saúde',
+      content: 'Crie planos seguros, com orientações e limites validados por profissionais.'
     }
   ],
   features2: [
     {
       icon: 'tabler-briefcase',
-      title: 'Automated Scaling',
-      content: 'Embrace a flexible work environment, allowing you to balance work.'
+      title: 'Escala Automatizada',
+      content: 'Reduza tarefas manuais com geração automática de protocolos e envio por WhatsApp.'
     },
     {
       icon: 'tabler-users',
-      title: 'Real-Time',
-      content: 'Support your family commitments with family-friendly policies and benefits.'
+      title: 'Conectado com seus Clientes',
+      content: 'Acompanhe feedbacks, adesão e adaptação dos planos em tempo real.'
     }
   ],
   profileGroups: {
@@ -65,152 +66,116 @@ export const feature5 = {
       { avatar: '/assets/images/user/avatar4.png' },
       { avatar: '/assets/images/user/avatar5.png' }
     ],
-    review: '10k+ Reviews (4.5 out of 5)'
+    review: 'Mais de 10.000 avaliações (nota média 4.8)'
   },
-  content: 'Explore diverse career paths within the company through our internal mobility programs.',
-  actionBtn: { children: 'Explore all Features', href: '#' }
+  content: 'Na AIFit.pro, você transforma seu atendimento em uma operação escalável com sua identidade.',
+  actionBtn: { children: 'Ver Todos os Recursos', href: '#' }
 };
 
+// ===================== Tudo em Uma Só Plataforma =====================
 export const feature20 = {
   heading: 'Tudo que você precisa em apenas uma plataforma',
   caption: 'Pronto para escalar seus atendimentos de forma hiperpersonalizada?',
-  actionBtn: { children: 'Adquire Agora!', href: BUY_NOW_URL, ...linkProps },
-  // secondaryBtn: { children: 'Plugins', href: SECTION_PATH },
+  actionBtn: { children: 'Adquira Agora!', href: BUY_NOW_URL, ...linkProps },
   features: [
     {
       icon: 'tabler-accessible',
       title: 'Planos Gerados por IA em Segundos',
-      content: 'Crie fichas completas de dieta e treino com base em objetivos genéricos (como "emagrecer") ou específicos (como "cutting com treino ABC"). Tudo com o toque da Inteligência Artificial — rápido, preciso e sob medida.'
+      content: 'Monte fichas completas de dieta e treino com base em objetivos gerais (ex: emagrecimento) ou específicos (ex: cutting com treino ABC). Rápido, preciso e com a sua assinatura.'
     },
     {
       icon: 'tabler-brand-google',
       title: 'Templates Inteligentes que Aprendem com Você',
-      content: 'Salve suas próprias estruturas e deixe a IA aprender seu estilo. A cada novo cliente, ela sugere ajustes personalizados com base nas suas preferências e histórico.'
+      content: 'Salve seu estilo de atendimento e permita que a IA sugira planos cada vez mais alinhados com sua abordagem.'
     },
     {
       icon: 'tabler-stack-2',
       title: 'Envio Automático via WhatsApp',
-      content: 'Gere o plano e envie direto no WhatsApp do cliente em formato de texto, imagem ou PDF. Mais agilidade, menos retrabalho e um atendimento digital e moderno.'
+      content: 'Protocolo pronto? Envie direto ao cliente no WhatsApp em formato texto, imagem ou PDF. Zero retrabalho.'
     },
     {
       icon: 'tabler-rocket',
       title: 'Feedback e Adaptação Contínua com IA',
-      content: 'Acompanhe adesão ao plano, evolução corporal e respostas do cliente em tempo real. A IA analisa esses dados e ajuda você a adaptar as fichas conforme a resposta fisiológica.'
+      content: 'A IA analisa resposta dos clientes, adesão e progresso — ajudando você a ajustar as recomendações com base em dados.'
     },
     {
       icon: 'tabler-help',
       title: 'Escale Seu Atendimento com IA',
-      content: 'Atenda 3x mais clientes com a mesma qualidade. A AIFit.pro automatiza o que é repetitivo, acelera o que é técnico e mantém você no controle do estratégico. Menos tempo criando planos, mais tempo crescendo o seu negócio.'
+      content: 'Multiplique sua capacidade de atendimento sem perder qualidade. A automação cuida do operacional e você do estratégico.'
     },
     {
       icon: 'tabler-refresh',
-      title: 'Regular Updates',
-      content: 'Veja a performance de cada cliente e da sua operação. Métricas de resultado, evolução nutricional e física — tudo em um painel intuitivo.'
+      title: 'Painel de Resultados',
+      content: 'Monitore performance nutricional, corporal e operacional em tempo real com gráficos claros e acionáveis.'
     }
   ]
 };
 
+// ===================== Design & Ferramentas =====================
 export const feature21 = {
-  heading: `Design Faster, Smarter with ${branding.brandName} Figma`,
-  caption: 'Unlock Figma’s advanced tools for streamlined, scalable, and responsive SaaS UI design.',
-// image: '/assets/images/graphics/ai/desktop1-light.svg',
-  // primaryBtn: { children: 'Free Figma', href: 'https://www.figma.com/community/file/1425095061180549847', ...linkProps },
- /* secondaryBtn: {
-    children: 'Preview Pro Figma',
-    href: 'https://www.figma.com/design/mlkXfeqxUKqIo0GQhPBqPb/SaasAble---UI-Kit---Preview-only?node-id=11-1833&t=JBHOIIEuYZpmN6v8-1',
-    ...linkProps
-  },*/
+  heading: `Design rápido e inteligente com ${branding.brandName} Figma`,
+  caption: 'Desbloqueie templates e componentes avançados para criar interfaces SaaS responsivas e escaláveis.',
   features: [
-    {
-      animationDelay: 0.1,
-      icon: 'tabler-components',
-      title: 'Component Architecture'
-    },
-    {
-      animationDelay: 0.2,
-      icon: 'tabler-moon',
-      title: 'Dark Mode'
-    },
-    {
-      animationDelay: 0.3,
-      icon: 'tabler-brightness-auto',
-      title: 'Auto Layout'
-    },
-    {
-      animationDelay: 0.4,
-      icon: 'tabler-accessible',
-      title: 'WCAG Compliant'
-    },
-    {
-      animationDelay: 0.1,
-      icon: 'tabler-icons',
-      title: 'Custom Icons'
-    },
-    {
-      animationDelay: 0.2,
-      icon: 'tabler-file-stack',
-      title: 'Page Demos'
-    },
-    {
-      animationDelay: 0.3,
-      icon: 'tabler-brand-matrix',
-      title: 'Material 3 Guideline'
-    },
-    {
-      animationDelay: 0.4,
-      icon: 'tabler-click',
-      title: 'Quick Customization'
-    }
+    { animationDelay: 0.1, icon: 'tabler-components', title: 'Arquitetura de Componentes' },
+    { animationDelay: 0.2, icon: 'tabler-moon', title: 'Modo Escuro' },
+    { animationDelay: 0.3, icon: 'tabler-brightness-auto', title: 'Auto Layout' },
+    { animationDelay: 0.4, icon: 'tabler-accessible', title: 'Acessibilidade WCAG' },
+    { animationDelay: 0.1, icon: 'tabler-icons', title: 'Ícones Customizados' },
+    { animationDelay: 0.2, icon: 'tabler-file-stack', title: 'Demonstrações de Páginas' },
+    { animationDelay: 0.3, icon: 'tabler-brand-matrix', title: 'Guia Material 3' },
+    { animationDelay: 0.4, icon: 'tabler-click', title: 'Personalização Rápida' }
   ]
 };
 
+// ===================== Plus Version =====================
 export const feature = {
-  heading: `What’s Inside of ${branding.brandName} Plus Version`,
+  heading: `O que vem no ${branding.brandName} Plus`,
   features: [
     {
       image: '/assets/images/shared/react.svg',
       title: 'CRA JavaScript',
-      content: 'Ensure accessibility with WCAG compliant design for browsing.'
+      content: 'Estrutura pré-configurada para projetos React acessíveis.'
     },
     {
       image: '/assets/images/shared/next-js.svg',
       title: 'Next.js JavaScript',
-      content: 'Tailor typography for optimal readability across all screen sizes.'
+      content: 'SEO e performance otimizadas para produção.'
     },
     {
       image: '/assets/images/shared/react.svg',
       title: 'CRA TypeScript',
-      content: 'Customize Material 3 design MUI components for enhanced aesthetics.'
+      content: 'Tipagem completa e robusta com Material 3.'
     },
     {
       image: '/assets/images/shared/next-js.svg',
       title: 'Next.js TypeScript',
-      content: 'Adjust content layout for visual coherence on various screen sizes.'
+      content: 'Roteamento e API Routes com tipagem.'
     },
     {
       image: '/assets/images/shared/figma.svg',
-      title: 'Figma ',
-      content: 'Boost visibility with SEO-friendly features for better search rankings.'
+      title: 'Kit Figma',
+      content: 'Componentes e layouts prontos para suas telas.'
     },
     {
-      title: 'Check Out Our Pricing Plan',
-      content: 'Choose the plan that aligns with your SaaS product requirements.',
-      actionBtn: { children: 'Pricing Plan', href: BUY_NOW_URL, ...linkProps }
+      title: 'Confira os Planos',
+      content: 'Escolha o plano ideal para seu negócio.',
+      actionBtn: { children: 'Planos e Preços', href: BUY_NOW_URL, ...linkProps }
     }
   ]
 };
 
+// ===================== Insights em Tempo Real =====================
 export const feature7 = {
-  heading: 'Real-Time Performance Insights',
-  caption: 'Gain a competitive edge with real-time performance monitoring.',
+  heading: 'Insights em Tempo Real',
+  caption: 'Acompanhe métricas de desempenho instantaneamente, tomando decisões mais ágeis.',
   testimonials: [
     {
       image: '/assets/images/graphics/ai/graphics6-light.svg',
       features: [
         {
           icon: 'tabler-star',
-          title: 'Core Value',
-          content: 'Unlock growth potential through continuous monitoring, enabling proactive strategies in a competitive landscape.'
+          title: 'Valor Central',
+          content: 'Monitoramento contínuo para estratégias proativas.'
         }
       ]
     },
@@ -219,8 +184,8 @@ export const feature7 = {
       features: [
         {
           icon: 'tabler-route',
-          title: 'Multi-Cloud Orchestration',
-          content: 'Enhances flexibility and resilience in a multi-cloud environment.'
+          title: 'Orquestração Multi-Cloud',
+          content: 'Flexibilidade e resiliência em múltiplos provedores.'
         }
       ]
     },
@@ -229,116 +194,66 @@ export const feature7 = {
       features: [
         {
           icon: 'tabler-history',
-          title: 'Story',
-          content: 'Real-time performance insights empower teams to respond swiftly, optimizing operations and driving growth.'
+          title: 'Histórico',
+          content: 'Acesse dados passados para entender tendências.'
         }
       ]
     }
   ],
-  breadcrumbs: [{ title: 'Core Value' }, { title: 'Culture' }, { title: 'Story' }]
+  breadcrumbs: [{ title: 'Core Value' }, { title: 'Insights' }, { title: 'Real-Time' }]
 };
 
+// ===================== Extras de Cultura =====================
 export const feature23 = {
-  heading: 'Culture of Innovation',
-  caption:
-    'Join a team that embraces forward-thinking ideas, fosters innovation, and cultivates an environment where your creativity can flourish.',
-  heading2: 'Growth',
-  caption2: 'Our culture prioritizes continuous learning, encouraging personal and professional development. ',
-  image: '/assets/images/graphics/default/feature23-light.png',
-  primaryBtn: { children: 'Join  Our Team', href: '#' },
-
+  heading: 'Cultura de Excelência',
+  caption: 'Promovemos um ambiente de aprendizado constante e colaboração entre equipes.',
   features: [
     {
       icon: 'tabler-users',
-      title: 'Teamwork',
-      content: 'We embrace varied perspectives and backgrounds, creating an inclusive environment.'
+      title: 'Trabalho em Equipe',
+      content: 'Compartilhamos conhecimento para crescer juntos.'
     },
     {
       icon: 'tabler-star',
-      title: 'Inclusivity',
-      content: 'We embrace varied perspectives and backgrounds, creating an inclusive environment.'
+      title: 'Reconhecimento',
+      content: 'Valorizamos e celebramos cada conquista.'
     }
-  ]
+  ],
+  primaryBtn: { children: 'Junte-se a nós', href: '#' }
 };
 
+// ===================== Painel Administrativo =====================
 export const feature18 = {
-  heading: 'Administre clientes ponta a ponta.',
-  caption: 'AIFit.pro oferece uma poderosa ferramenta de administração ponta a ponta, permitindo que você gerencie seus clientes com eficiência, controle total e escalabilidade.',
+  heading: 'Administre clientes ponta a ponta',
+  caption: 'Com o painel da AIFit.pro, gerencie cada etapa do atendimento de forma centralizada e escalável.',
   topics: [
     {
       icon: 'tabler-sparkles',
-      title: 'Gerencie seus Clientes',
-      title2: 'Leverage Power of Material UI Components',
-      description: 'The power and flexibility of Material UI components in admin template',
+      title: 'Visão 360°',
+      description: 'Histórico completo, métricas de adesão e feedback em um só lugar.',
       image: '/assets/images/graphics/default/admin-dashboard.png',
-      list: [
-        { primary: 'Next.js JavaScript/TypeScript' },
-        { primary: 'Customize seus protocolos automaticamente' },
-        { primary: 'Rich Form and Table Components' },
-        { primary: 'Responsive Grid System' }
-      ],
-      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
-      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
+      actionBtn: { children: 'Acessar Dashboard', href: ADMIN_PATH, ...linkProps }
     },
     {
       icon: 'tabler-palette',
-      title: 'Customize seus protocolos',
-      title2: 'Flexible Theming Options',
-      description: 'Tailor themes effortlessly with MUI 7 robust theming system.',
+      title: 'Customização',
+      description: 'Ajuste protocolos, limites e visual conforme seu método.',
       image: '/assets/images/graphics/default/admin-dashboard-2.png',
-      list: [
-        { primary: 'Easy options for Theming' },
-        { primary: 'Layout Options' },
-        { primary: 'Color Presets tailored to your Web Apps' },
-        { primary: 'Consistency in Design' }
-      ],
-      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
-      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
+      actionBtn: { children: 'Editar Protocolos', href: ADMIN_PATH, ...linkProps }
     },
     {
       icon: 'tabler-rocket',
-      title: 'Desenvola protocolos com IA',
-      title2: 'Rapid Development',
-      description: 'Launch projects quicker with pre-built layouts and components.',
+      title: 'Envio Instantâneo',
+      description: 'Dispare planos via WhatsApp ou exporte em PDF/Imagem.',
       image: '/assets/images/graphics/default/admin-dashboard-3.png',
-      list: [
-        { primary: 'Time Saving' },
-        { primary: 'Tested and Reliable' },
-        { primary: 'Customization Ready' },
-        { primary: 'Enhanced User Experience' }
-      ],
-      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
-      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
+      actionBtn: { children: 'Configurar Integrações', href: DOCS_URL, ...linkProps }
     },
     {
       icon: 'tabler-scale',
-      title: 'Aumente suas Vendas',
-      title2: 'Build to Scale',
-      description: 'Easily scale your app with flexible, modular, and extensible templates.',
+      title: 'Automação Inteligente',
+      description: 'Reduza tarefas repetitivas e foque no crescimento do seu negócio.',
       image: '/assets/images/graphics/default/admin-dashboard.png',
-      list: [
-        { primary: 'Modular Architecture' },
-        { primary: 'Performance Optimized' },
-        { primary: 'Extensible Codebase' },
-        { primary: 'Future Proof Design' }
-      ],
-      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
-      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
-    },
-    {
-      icon: 'tabler-scale',
-      title: 'Escale utilizando Whatsapp',
-      title2: 'Build to Scale',
-      description: 'Easily scale your app with flexible, modular, and extensible templates.',
-      image: '/assets/images/graphics/default/admin-dashboard.png',
-      list: [
-        { primary: 'Modular Architecture' },
-        { primary: 'Performance Optimized' },
-        { primary: 'Extensible Codebase' },
-        { primary: 'Future Proof Design' }
-      ],
-      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
-      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
+      actionBtn: { children: 'Ver Seção de Plugins', href: SECTION_PATH, ...linkProps }
     }
   ]
 };

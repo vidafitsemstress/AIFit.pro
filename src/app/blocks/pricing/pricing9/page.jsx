@@ -1,39 +1,58 @@
 // @project
 import { Pricing9 } from '@/blocks/pricing';
+import { BUY_NOW_URL } from '@/path';
+
+const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 
 /***************************  PRICING 9 - DATA  ***************************/
 
 const data = {
-  heading: 'The Affordable Unfair Advantage',
-  caption: 'Choose the plan that aligns with your cloud management requirements.',
+  heading: 'Planos sob medida para seu crescimento',
+  caption: 'Escalone seus atendimentos com inteligência e personalização.',
   features: [
-    { id: 1, label: '1 Demo Landing' },
-    { id: 2, label: '7 Demo Landing' },
-    { id: 3, label: '25 Components Blocks' },
-    { id: 4, label: '193+ Component Blocks' },
-    { id: 5, label: 'Dark/Light Mode' },
-    { id: 6, label: 'Typescript Version' },
-    { id: 7, label: 'Design File (Figma)' },
-    { id: 8, label: 'Multiple Color Options' },
-    { id: 9, label: 'RTL' },
-    { id: 10, label: 'Supbase Authentication' }
+    { id: 1, label: 'Criação de Dietas com IA' },
+    { id: 2, label: 'Criação de Treinos com IA' },
+    { id: 3, label: 'Protocolos Alimentares e de Exercícios' },
+    { id: 4, label: 'Preferências Personalizadas por Empresa' },
+    { id: 5, label: 'Upload de Protocolos Existentes' },
+    { id: 6, label: 'Chatbot Integrado via WhatsApp' },
+    { id: 7, label: 'Painel de Clientes com Indicadores' },
+    { id: 8, label: 'Personalização com Logo e Cores' },
+    { id: 9, label: 'Estilo de Comunicação da IA' },
+    { id: 10, label: 'Plugins Avançados (em breve)' }
   ],
   plans: [
     {
-      title: 'Free',
-      price: 0,
+      title: 'Starter',
+      price: 'R$ 39,90',
       active: false,
-      featureTitle: 'Features',
-      exploreLink: { children: 'Get Started With Free' },
-      featuresID: [1, 3]
+      featureTitle: 'Para começar com controle',
+      exploreLink: { children: 'Assinar Starter', href: BUY_NOW_URL, ...linkProps },
+      featuresID: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     },
     {
       title: 'Pro',
+      price: 'R$ 119,90',
       active: false,
-      price: 69,
-      featureTitle: 'Features',
-      exploreLink: { children: 'Get Started With Pro' },
-      featuresID: [2, 4, 5, 6, 7, 8, 9, 10]
+      featureTitle: 'Para profissionais em crescimento',
+      exploreLink: { children: 'Assinar Pro', href: BUY_NOW_URL, ...linkProps },
+      featuresID: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+      title: 'Time',
+      price: 'R$ 249,90',
+      active: false,
+      featureTitle: 'Para equipes com identidade',
+      exploreLink: { children: 'Assinar Time', href: BUY_NOW_URL, ...linkProps },
+      featuresID: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+      title: 'Escala',
+      price: 'R$ 532,80',
+      active: true,
+      featureTitle: 'Para escalar com inteligência',
+      exploreLink: { children: 'Assinar Escala', href: BUY_NOW_URL, ...linkProps },
+      featuresID: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     }
   ]
 };

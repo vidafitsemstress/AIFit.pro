@@ -29,7 +29,6 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 import GetImagePath from '@/utils/GetImagePath';
 
 // @assets
-import Background from '@/images/graphics/Background';
 import Wave from '@/images/graphics/Wave';
 
 /***************************  OTHER - 1  ***************************/
@@ -55,7 +54,7 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
         <Grid container spacing={1.5}>
           {sections.map((item, index) => (
             <Grid key={index} size={{ xs: 6, sm: 4, md: 4 }}>
-              <GraphicsCard sx={{ overflow: 'hidden' }}>
+              <GraphicsCard sx={{ overflow: 'hidden', bgcolor: 'transparent' }}>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   initial={{ opacity: 0, y: 25 }}
@@ -81,16 +80,18 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
                       aria-label={item.title}
                       sx={{ position: 'absolute', top: 0, height: 1, width: 1, borderRadius: { xs: 6, sm: 8, md: 10 }, zIndex: 1 }}
                     />
-                    <Background />
+                    {/* <Background /> removed to allow image fill */}
                     <Box sx={{ position: 'absolute', top: 0, width: 1, height: 1, textAlign: 'center' }}>
                       <CardMedia
                         component="img"
                         image={GetImagePath(item.image)}
                         sx={{
-                          px: '14.5%',
-                          pt: '16%',
-                          pb: { xs: 2, md: 1 },
-                          objectFit: 'contain'
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover'
                         }}
                         alt="other sections"
                         loading="lazy"
@@ -125,34 +126,6 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
             </Grid>
           ))}
         </Grid>
-        <Stack sx={{ gap: 2, alignItems: 'center' }}>
-          <Typography variant="h6" align="center" sx={{ color: 'text.secondary', width: { xs: 1, sm: '80%', md: '65%' } }}>
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: 0.3
-              }}
-            >
-              {description}
-            </motion.div>
-          </Typography>
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.5,
-              delay: 0.4
-            }}
-          >
-            <ButtonAnimationWrapper>
-              <Button variant="outlined" {...primaryBtn} />
-            </ButtonAnimationWrapper>
-          </motion.div>
-        </Stack>
       </Stack>
     </ContainerWrapper>
   );
