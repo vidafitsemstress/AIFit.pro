@@ -18,7 +18,14 @@ export default function MainLayout({ children }) {
   return (
     <>
       {/* header section */}
-      <Box sx={{ bgcolor: 'grey.100', position: 'fixed', top: 0, width: '100%', zIndex: (theme) => theme.zIndex.appBar }}>
+      <Box sx={{
+        background: 'transparent',
+        minHeight: (theme) => theme.mixins.toolbar.minHeight,
+        position: 'fixed',
+        top: 0,
+        width: '100%',
+        zIndex: (theme) => theme.zIndex.appBar
+      }}>
         <Navbar10>
           <NavbarContent10 {...navbar} />
         </Navbar10>

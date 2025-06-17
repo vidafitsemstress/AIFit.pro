@@ -26,6 +26,13 @@ export default function ComponentsOverrides(theme) {
     Link(theme),
     OutlinedInput(theme),
     Switch(theme),
-    Tab()
+    Tab(),
+    {
+      MuiButtonBase: {
+        defaultProps: {
+          disableRipple: true
+        }
+      }
+    }
   );
 }
