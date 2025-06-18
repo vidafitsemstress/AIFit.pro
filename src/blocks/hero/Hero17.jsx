@@ -156,16 +156,6 @@ export default function Hero17({
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.4, ease: [0.215, 0.61, 0.355, 1] }}
-              >
-                <ButtonAnimationWrapper>
-                  <Button color="primary" variant="contained" startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />} {...primaryBtn} />
-                </ButtonAnimationWrapper>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.5, ease: [0.215, 0.61, 0.355, 1] }}
               >
                 <Stack direction="row" sx={{ gap: 1, flexWrap: 'wrap', justifyContent: 'center' }}>

@@ -173,16 +173,6 @@ export default function Feature20({ heading, caption, image, features, actionBtn
                   <Button variant="outlined" {...secondaryBtn} />
                 </ButtonAnimationWrapper>
               )}
-              {actionBtn && (
-                <ButtonAnimationWrapper>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
-                    ///{...actionBtn}
-                  />
-                </ButtonAnimationWrapper>
-              )}
             </Stack>
           </motion.div>
         </Stack>

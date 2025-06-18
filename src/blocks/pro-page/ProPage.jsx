@@ -59,20 +59,6 @@ export default function ProPage({ image }) {
                   Preview Pro
                 </Button>
               </Grid>
-              <Grid>
-                <ButtonAnimationWrapper>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    component={NextLink}
-                    href={'https://www.saasable.io/sections'}
-                    target="_blank"
-                    startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
-                  >
-                    View Pro Component
-                  </Button>
-                </ButtonAnimationWrapper>
-              </Grid>
             </Grid>
           </Box>
         </Box>

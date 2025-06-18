@@ -20,7 +20,7 @@ export const pricing = {
   plans: [
     {
       title: 'Starter',
-      price: 'RL 39,90',
+      price: 'R$ 39,90',
       active: false,
       featureTitle: 'Para começar com controle',
       content: 'Ideal para coaches que estão estruturando seus atendimentos digitais.',
@@ -29,7 +29,7 @@ export const pricing = {
     },
     {
       title: 'Pro',
-      price: 'RL 119,90',
+      price: 'R$ 119,90',
       active: false,
       featureTitle: 'Para profissionais em crescimento',
       content: 'Tudo o que você precisa para entregar planos únicos com eficiência.',
@@ -38,7 +38,7 @@ export const pricing = {
     },
     {
       title: 'Time',
-      price: 'RL 532,90',
+      price: 'R$ 532,90',
       active: false,
       featureTitle: 'Para equipes com identidade',
       content: 'Adicione identidade visual, compartilhe preferências e acompanhe seu time.',
