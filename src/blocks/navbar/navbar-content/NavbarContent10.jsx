@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Slide from '@mui/material/Slide';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
 
 // @project
-import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
-import ContainerWrapper from '@/components/ContainerWrapper';
 import Logo from '@/components/logo';
 import {
   MenuPopper,
@@ -19,91 +19,87 @@ import {
   NavPrimaryButton,
   NavSecondaryButton
 } from '@/components/navbar';
+import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
+import ContainerWrapper from '@/components/ContainerWrapper';
 import SvgIcon from '@/components/SvgIcon';
-
-/***************************  NAVBAR - CONTENT 10  ***************************/
 
 export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, secondaryBtn }) {
   const theme = useTheme();
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
   const downSM = useMediaQuery(theme.breakpoints.down('sm'));
-  // trigger when scroll past threshold
-  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 80 });
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 0 });
+  const showOnScroll = !trigger || downSM;
 
   return (
-    <Stack
-      direction="row"
-      alignItems="center"
-      justifyContent="space-between"
-      width={1}
-    >
-      <Box
-        sx={{
-          transform: trigger ? 'scale(0.7)' : 'scale(0.7)',
-          transformOrigin: 'top left',
-          p: 1,
-          borderRadius: 15,
-          mt: 2.5,
-          bgcolor: trigger ? 'rgba(60, 150, 147, 0.2)' : 'transparent',
-          transition: 'background-color 0.3s, transform 0.3s'
-        }}
-      >
-        <Logo to={landingBaseUrl} sx={{ width: '70%' }} />
-      </Box>
-      {!downMD && navItems && (
-        <Box sx={{ bgcolor: 'grey.200', borderRadius: 10 }}>
-          <NavMenu {...{ navItems }} />
-        </Box>
-      )}
-      <Stack direction="row" sx={{ gap: { xs: 1, md: 1.5 } }}>
-        {!downSM && (
-          <>
-            <NavSecondaryButton {...secondaryBtn} />
-            <ButtonAnimationWrapper>
-              <NavPrimaryButton {...primaryBtn} />
-            </ButtonAnimationWrapper>
-          </>
-        )}
-        {downMD && (
-          <Box sx={{ flexGrow: 1 }}>
-            <MenuPopper
-              offset={downSM ? 12 : 16}
-              toggleProps={{
-                children: <SvgIcon name="tabler-menu-2" color="text.primary" />,
-                color: 'inherit',
-                sx: { minWidth: 40, width: 40, height: 40, p: 0 }
+    <>
+      <Slide appear={false} direction="down" in={showOnScroll}>
+        <Stack
+          component="nav"
+          direction="row"
+          alignItems="center"
+          justifyContent="center"
+          sx={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: theme.zIndex.appBar,
+            backgroundColor: downSM ? 'rgba(255,255,255,0.8)' : 'transparent',
+            py: 2,
+            px: { xs: 3, md: 4 },
+            gap: { xs: 5, md: 10 }
+          }}
+        >
+          {/* Logo immediately before menu */}
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Logo to={landingBaseUrl} sx={{ width: downSM ? '100px' : '120px' }} />
+          </Box>
+
+          {/* Menu centered inline with blue border */}
+          {!downMD && navItems && (
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                bgcolor: 'rgba(255,255,255,0.8)',
+                border: '1px solid',
+                borderColor: 'primary.main',
+                borderRadius: 10,
+                px: { xs: 1, md: 2 }
               }}
             >
-              <ContainerWrapper>
-                {navItems && (
-                  <Box sx={{ mx: -2 }}>
-                    <NavMenuDrawer {...{ navItems }} />
-                  </Box>
-                )}
-                {downSM && (
-                  <Stack
-                    direction="row"
-                    sx={{
-                      justifyContent: 'space-between',
-                      gap: 1,
-                      px: 5,
-                      py: 2.5,
-                      mx: -5,
-                      bgcolor: 'grey.100'
-                    }}
-                  >
-                    <NavSecondaryButton {...secondaryBtn} />
-                    <ButtonAnimationWrapper>
-                      <NavPrimaryButton {...primaryBtn} />
-                    </ButtonAnimationWrapper>
-                  </Stack>
-                )}
-              </ContainerWrapper>
-            </MenuPopper>
+              <NavMenu navItems={navItems} />
+            </Box>
+          )}
+
+          {/* Buttons immediately after menu */}
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1, md: 2 } }}>
+            {!downSM ? (
+              <>
+                <NavSecondaryButton {...secondaryBtn} />
+                <ButtonAnimationWrapper>
+                  <NavPrimaryButton {...primaryBtn} />
+                </ButtonAnimationWrapper>
+              </>
+            ) : (
+              <MenuPopper
+                offset={12}
+                toggleProps={{
+                  children: <SvgIcon name="tabler-menu-2" color="text.primary" />,  
+                  color: 'inherit',
+                  sx: { width: 36, height: 36 }
+                }}
+              >
+                <ContainerWrapper>
+                  <NavMenuDrawer navItems={navItems} />
+                </ContainerWrapper>
+              </MenuPopper>
+            )}
           </Box>
-        )}
-      </Stack>
-    </Stack>
+        </Stack>
+      </Slide>
+      <Toolbar />
+    </>
   );
 }
 

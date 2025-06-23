@@ -39,24 +39,28 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function Navbar10({ children }) {
   return (
-    <AppBar
-      position="fixed"
-      color="inherit"
-      elevation={0}
-      sx={{
-        background: 'transparent',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: (theme) => theme.zIndex.appBar
-      }}
-    >
-      <ContainerWrapper>
-        <StyledToolbar>
-          {children}
-        </StyledToolbar>
-      </ContainerWrapper>
-    </AppBar>
+    <>
+      <AppBar
+        position="fixed"
+        color="inherit"
+        elevation={0}
+        sx={{
+          background: 'transparent',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: (theme) => theme.zIndex.appBar
+        }}
+      >
+        <ContainerWrapper>
+          <StyledToolbar>
+            {children}
+          </StyledToolbar>
+        </ContainerWrapper>
+      </AppBar>
+      {/* Spacer to offset fixed AppBar height */}
+      <Toolbar />
+    </>
   );
 }
 

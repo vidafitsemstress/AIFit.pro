@@ -22,7 +22,7 @@ export const hero = {
             bgcolor: 'primary.lighter',
             mr: -1,
             ml: 0.75,
-            '& .MuiChip-label': { px: 1.25 }
+            '& .MuiChip-label': { px: 3.25 }
           }}
           icon={
             <CardMedia
@@ -37,7 +37,7 @@ export const hero = {
       </>
     )
   },
-  headLine: 'Personalize protocolos do seu jeito com inteligência artificial e sem perder seu toque.',
+  headLine: 'Multiplique seu atendimento com IA: crie treinos e dietas personalizados em segundos.',
   captionLine: 'Automatize seu atendimento, escale seu serviço e entregue protocolos com a sua identidade, em segundos.',
   // primaryBtn: { children: 'Explorar', href: SECTION_PATH },
   videoSrc: '/assets/videos/thumbnails/intro.mp4',

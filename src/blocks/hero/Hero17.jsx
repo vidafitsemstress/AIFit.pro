@@ -93,7 +93,10 @@ export default function Hero17({
           zIndex: -1,
           borderBottomLeftRadius: boxRadius,
           borderBottomRightRadius: boxRadius,
-          background: `url('/assets/images/graphics/ai/backgorund.jpg') center/cover no-repeat`
+backgroundImage: `url('/assets/images/graphics/ai/backgorund.jpg')`,
+backgroundRepeat: 'no-repeat',
+backgroundPosition: 'center',
+backgroundSize: 'auto'
         }}
       />
       <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>

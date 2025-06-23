@@ -1,26 +1,52 @@
 // @project
 import { landingMegamenu, pagesMegamenu } from '../../common-data';
 import SvgIcon from '@/components/SvgIcon';
-import { SECTION_PATH, ADMIN_PATH, BUY_NOW_URL, DOCS_URL } from '@/path';
+import { SECTION_PATH, ADMIN_PATH, BUY_NOW_URL /* DOCS_URL removed */ } from '@/path';
 
-/***************************  DEFAULT - NAVBAR  ***************************/
+/***************************  DEFAULT - NAVBAR ***************************/
 
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 
 export const navbar = {
   customization: true,
   secondaryBtn: {
-    children: <SvgIcon name="tabler-brand-instagram" color="primary.main" size={18} />,
+    children: 'Login',
     href: 'https://instagram.com/aifit.pro',
     ...linkProps,
-    sx: { minWidth: 40, width: 40, height: 40, p: 0 }
+    variant: 'outlined',
+    color: 'primary',
+    sx: {
+      minWidth: 80,
+      border: '1px solid',
+      borderColor: 'primary.main'
+    }
   },
-  primaryBtn: { children: 'Adquira agora!', href: BUY_NOW_URL, ...linkProps },
+  primaryBtn: {
+    children: 'Adquira agora!',
+    href: BUY_NOW_URL,
+    ...linkProps
+  },
   navItems: [
-    { id: 'home', title: 'Home', link: '/' },
-    landingMegamenu,
-    { id: 'dashboard', title: 'Quem somos', link: ADMIN_PATH, ...linkProps },
-    { id: 'how', title: 'Como funciona', link: 'https://stage.saasable.io/about', ...linkProps },
-    { id: 'docs', title: 'Acessar AIFit.pro', link: DOCS_URL, ...linkProps, icon: 'tabler-pin-invoke' }
+    // substituído Home por Como Funciona
+    {
+      id: 'how',
+      title: 'Como Funciona',
+      link: 'https://stage.saasable.io/about',
+      ...linkProps
+    },
+
+    // menu principal com borda azul
+    {
+      ...landingMegamenu,
+      sx: {
+        border: '1px solid',
+        borderColor: 'primary.main',
+        borderRadius: 4
+      }
+    },
+
+    { id: 'dashboard', title: 'Quem Somos', link: ADMIN_PATH, ...linkProps },
+
+    // removido o item "Acessar AIFit.Pro"
   ]
 };
