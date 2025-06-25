@@ -41,7 +41,7 @@ export const navbar = {
       sx: {
         border: '1px solid',
         borderColor: 'primary.main',
-        borderRadius: 4
+        borderRadius: 4, fontWeight: 'bold', 
       }
     },
 

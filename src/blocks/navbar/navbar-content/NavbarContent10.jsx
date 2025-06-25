@@ -59,14 +59,16 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
           {!downMD && navItems && (
             <Box
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                bgcolor: 'rgba(255,255,255,0.8)',
-                border: '1px solid',
-                borderColor: 'primary.main',
-                borderRadius: 10,
-                px: { xs: 1, md: 2 }
-              }}
+    display: 'flex',
+    alignItems: 'center',
+    bgcolor: 'grey.100',              // fundo sólido com a cor primária
+    color: 'primary.contrastText',        // garante legibilidade
+    border: '1px solid',
+    borderColor: 'grey.100',
+    borderRadius: 10,
+    px: { xs: 1, md: 2 },
+     fontWeight: 'bold', 
+  }}
             >
               <NavMenu navItems={navItems} />
             </Box>

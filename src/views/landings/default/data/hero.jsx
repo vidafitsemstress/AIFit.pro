@@ -1,48 +1,41 @@
-// @mui
-import CardMedia from '@mui/material/CardMedia';
-import Chip from '@mui/material/Chip';
-import Typography from '@mui/material/Typography';
+// src/views/landings/default/data/hero.jsx
+import React from 'react';
 import { SECTION_PATH } from '@/path';
 
 export const hero = {
+  // mantém o chip escondido
   chip: {
-    label: (
-      <>
-        <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-          Sua solução com infinitas
-        </Typography>
-        <Chip
-          label={
-            <Typography variant="caption" sx={{ color: 'primary.main' }}>
-              Possibilidades
-            </Typography>
-          }
-          sx={{
-            height: 24,
-            bgcolor: 'primary.lighter',
-            mr: -1,
-            ml: 0.75,
-            '& .MuiChip-label': { px: 3.25 }
-          }}
-          icon={
-            <CardMedia
-              component="img"
-              image="/assets/images/shared/celebration.svg"
-              sx={{ width: 16, height: 16 }}
-              alt="celebration"
-              loading="lazy"
-            />
-          }
-        />
-      </>
-    )
+    label: <></>,
+    sx: { display: 'none' },
   },
-  headLine: 'Multiplique seu atendimento com IA: crie treinos e dietas personalizados em segundos.',
-  captionLine: 'Automatize seu atendimento, escale seu serviço e entregue protocolos com a sua identidade, em segundos.',
-  // primaryBtn: { children: 'Explorar', href: SECTION_PATH },
+
+  // texto puro, sem novo <h1>, estilizado via <span> interno
+  headLine: (
+    <span style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }}>
+      Multiplique seu atendimento com IA: crie treinos e dietas personalizados em segundos.
+    </span>
+  ),
+
+  // subtítulo preservado como string
+  captionLine:
+    'Automatize seu atendimento, escale seu serviço e entregue protocolos com a sua identidade, em segundos.',
+
+  primaryBtn: {
+    children: 'Explorar',
+    href: SECTION_PATH,
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    sx: {
+      fontFamily: 'Montserrat, sans-serif',
+      fontWeight: 'bold',
+    },
+  },
+
   videoSrc: '/assets/videos/thumbnails/intro.mp4',
- // videoThumbnail: '/assets/videos/thumbnails/intro-thumbnail.png',
-  listData: [
-   
-  ]
+  listData: [],
+
+  // adiciona margem superior
+  sx: {
+    mt: 6, // 6 * 8px = 48px
+  },
 };
