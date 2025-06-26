@@ -227,33 +227,13 @@ export const feature18 = {
   heading: 'Administre clientes ponta a ponta',
   caption: 'Com o painel da AIFit.pro, gerencie cada etapa do atendimento de forma centralizada e escalável.',
   topics: [
-    {
-      icon: 'tabler-sparkles',
-      title: 'Visão 360°',
-      description: 'Histórico completo, métricas de adesão e feedback em um só lugar.',
-      image: '/assets/images/graphics/default/admin-dashboard.png',
-      actionBtn: { children: 'Acessar Dashboard', href: ADMIN_PATH, ...linkProps }
-    },
-    {
-      icon: 'tabler-palette',
-      title: 'Customização',
-      description: 'Ajuste protocolos, limites e visual conforme seu método.',
-      image: '/assets/images/graphics/default/admin-dashboard-2.png',
-      actionBtn: { children: 'Editar Protocolos', href: ADMIN_PATH, ...linkProps }
-    },
-    {
-      icon: 'tabler-rocket',
-      title: 'Envio Instantâneo',
-      description: 'Dispare planos via WhatsApp ou exporte em PDF/Imagem.',
-      image: '/assets/images/graphics/default/admin-dashboard-3.png',
-      actionBtn: { children: 'Configurar Integrações', href: DOCS_URL, ...linkProps }
-    },
-    {
-      icon: 'tabler-scale',
-      title: 'Automação Inteligente',
-      description: 'Reduza tarefas repetitivas e foque no crescimento do seu negócio.',
-      image: '/assets/images/graphics/default/admin-dashboard.png',
-      actionBtn: { children: 'Ver Seção de Plugins', href: SECTION_PATH, ...linkProps }
-    }
+{ icon: 'tabler-users', title: 'Gestão de Clientes', image: '/assets/images/graphics/default/admin-dashboard.png' },
+{ icon: 'tabler-dumbbell', title: 'Treinos via IA', image: '/assets/images/graphics/default/admin-dashboard-2.png' },
+{ icon: 'tabler-bowl-food', title: 'Dietas via IA', image: '/assets/images/graphics/default/admin-dashboard-3.png' },
+{ icon: 'tabler-file-text', title: 'Protocolos personalizados', image: '/assets/images/graphics/default/admin-dashboard-4.png' },
+{ icon: 'tabler-chart-line', title: 'Controle de Performance dos Clientes', image: '/assets/images/graphics/default/admin-dashboard-5.png' },
+{ icon: 'tabler-send', title: 'Envio automático dos protocolos', image: '/assets/images/graphics/default/admin-dashboard-6.png' },
+{ icon: 'tabler-message-circle', title: 'Chatbot', image: '/assets/images/graphics/default/admin-dashboard-7.png' },
+{ icon: 'tabler-brand-whatsapp', title: 'WhatsApp', image: '/assets/images/graphics/default/admin-dashboard-8.png' }
   ]
 };

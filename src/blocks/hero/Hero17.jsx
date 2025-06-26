@@ -154,6 +154,18 @@ backgroundSize: 'auto'
                 </Typography>
               </motion.div>
             </Stack>
+            {primaryBtn && (
+              <Box sx={{ display: 'flex', justifyContent: 'center', mt: { xs: 2, sm: 3 } }}>
+                <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.4 }}
+              >
+                {primaryBtn}
+                </motion.div>
+              </Box>
+            )}
             <Stack sx={{ alignItems: 'center', gap: 2, mt: { xs: 3, sm: 4, md: 5 } }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}

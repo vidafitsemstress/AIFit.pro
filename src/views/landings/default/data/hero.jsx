@@ -1,6 +1,6 @@
 // src/views/landings/default/data/hero.jsx
 import React from 'react';
-import { SECTION_PATH } from '@/path';
+import Button from '@mui/material/Button';
 
 export const hero = {
   // mantém o chip escondido
@@ -20,16 +20,22 @@ export const hero = {
   captionLine:
     'Automatize seu atendimento, escale seu serviço e entregue protocolos com a sua identidade, em segundos.',
 
-  primaryBtn: {
-    children: 'Explorar',
-    href: SECTION_PATH,
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    sx: {
-      fontFamily: 'Montserrat, sans-serif',
-      fontWeight: 'bold',
-    },
-  },
+  primaryBtn: (
+    <Button
+      variant="contained"
+      component="a"
+      href="https://www.aifit.pro"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        mt: 2,
+        fontFamily: 'Montserrat, sans-serif',
+        fontWeight: 'bold',
+      }}
+    >
+      Adquira Agora!
+    </Button>
+  ),
 
   videoSrc: '/assets/videos/thumbnails/intro.mp4',
   listData: [],

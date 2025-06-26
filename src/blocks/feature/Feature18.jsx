@@ -1,6 +1,5 @@
 'use client';
 import PropTypes from 'prop-types';
-
 import { useState } from 'react';
 
 // @mui
@@ -25,67 +24,48 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 import GraphicsImage from '@/components/GraphicsImage';
 
 /***************************  FEATURE - 18  ***************************/
-
 export default function Feature18({ heading, caption, topics }) {
   const boxPadding = { xs: 3, md: 5 };
   const imagePadding = { xs: 3, sm: 4, md: 5 };
-
   const [value, setValue] = useState('1');
 
-  // Handle tab change
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
-      <Stack sx={{ gap: { xs: 3, sm: 4 } }}>
-        <Typeset
-          {...{
-            heading,
-            caption,
-            stackProps: { sx: { alignItems: 'center', textAlign: 'center', maxWidth: { sm: 470, md: 615 }, mx: 'auto' } }
-          }}
-        />
-        <Stack sx={{ gap: 1.5, alignItems: 'center' }}>
+      <Box sx={{ maxWidth: 'lg', width: '100%', mx: 'auto' }}>
+        <Stack sx={{ gap: { xs: 3, sm: 4 } }}>
+          <Typeset
+            heading={heading}
+            caption={caption}
+            stackProps={{ sx: { alignItems: 'center', textAlign: 'center', maxWidth: { sm: 470, md: 615 }, mx: 'auto' } }}
+          />
+
           <TabContext value={value}>
-            <GraphicsCard sx={{ width: { xs: 1, sm: 'unset' } }}>
+            <GraphicsCard sx={{ width: '100%' }}>
               <Box sx={{ p: 0.25 }}>
                 <TabList
                   onChange={handleChange}
-                  sx={{ '& .MuiTabs-indicator': { display: 'none' }, minHeight: 'unset', p: 0.25 }}
                   variant="scrollable"
+                  sx={{ '& .MuiTabs-indicator': { display: 'none' }, minHeight: 'unset', p: 0.25 }}
                 >
-                  {topics.map((item, index) => (
+                  {topics.map((item, idx) => (
                     <Tab
+                      key={idx}
                       label={item.title}
-                      disableFocusRipple
-                      icon={
-                        <SvgIcon
-                          {...(typeof item.icon === 'string' ? { name: item.icon } : { ...item.icon })}
-                          size={16}
-                          stroke={2}
-                          color="text.secondary"
-                        />
-                      }
-                      value={String(index + 1)}
-                      key={index}
+                      value={String(idx + 1)}
+                      icon={<SvgIcon {...(typeof item.icon === 'string' ? { name: item.icon } : item.icon)} size={16} stroke={2} color="text.secondary" />}
                       iconPosition="start"
-                      tabIndex={0}
+                      disableFocusRipple
                       sx={{
                         minHeight: 44,
                         borderRadius: 10,
                         borderWidth: 1,
                         borderStyle: 'solid',
                         borderColor: 'transparent',
-                        '& svg ': { mr: 1 },
-                        '&.Mui-selected': {
-                          bgcolor: 'grey.200',
-                          borderColor: 'grey.400',
-                          color: 'text.primary',
-                          '& svg': { stroke: 'text.primary' }
-                        },
-                        '&.Mui-focusVisible': { bgcolor: 'grey.300' },
+                        '&.Mui-selected': { bgcolor: 'grey.200', borderColor: 'grey.400', color: 'text.primary', '& svg': { stroke: 'text.primary' } },
                         '&:hover': { bgcolor: 'grey.200' }
                       }}
                     />
@@ -93,101 +73,47 @@ export default function Feature18({ heading, caption, topics }) {
                 </TabList>
               </Box>
             </GraphicsCard>
-            {topics.map((item, index) => (
-              <TabPanel value={String(index + 1)} key={index} sx={{ p: 0, width: 1 }}>
-                <Grid container spacing={1.5}>
-                  <Grid size={{ xs: 12, sm: 5 }}>
-                    <GraphicsCard>
-                      <Box sx={{ pl: imagePadding, pt: imagePadding, height: { xs: 260, sm: 396, md: 434 } }}>
+
+            {topics.map((item, idx) => (
+              <TabPanel key={idx} value={String(idx + 1)} sx={{ p: 0 }}>
+                <Grid container spacing={2} alignItems="stretch">
+                  {/* Image Card */}
+                  <Grid item xs={12} md={5}>
+                    <GraphicsCard sx={{ height: '100%' }}>
+                      <Box sx={{ p: imagePadding, height: 1 }}>
                         <GraphicsImage
-                          sx={{
-                            height: 1,
-                            backgroundPositionX: 'left',
-                            backgroundPositionY: 'top',
-                            border: '5px solid',
-                            borderColor: 'grey.200',
-                            borderBottom: 'none',
-                            borderRight: 'none',
-                            borderTopLeftRadius: { xs: 12 },
-                            borderBottomRightRadius: { xs: 20, sm: 32, md: 40 }
-                          }}
                           image={item.image}
+                          sx={{ height: 1, width: 1, objectFit: 'cover', borderRadius: 2 }}
                         />
                       </Box>
                     </GraphicsCard>
                   </Grid>
-                  <Grid size={{ xs: 12, sm: 7 }}>
-                    <GraphicsCard sx={{ height: 1 }}>
-                      <Stack
-                        sx={{
-                          justifyContent: 'space-between',
-                          gap: 5,
-                          height: item.actionBtn || item.actionBtn2 ? { sm: 'calc(100% - 98px)', md: 'calc(100%  - 114px)' } : 1,
-                          pt: boxPadding,
-                          px: boxPadding
-                        }}
-                      >
-                        <Stack direction="row" sx={{ gap: 1 }}>
-                          <SvgIcon
-                            {...(typeof item.icon === 'string' ? { name: item.icon } : { ...item.icon })}
-                            size={16}
-                            stroke={2}
-                            color="text.primary"
-                          />
-                          <Typography variant="subtitle2" sx={{ color: 'text.secondary' }}>
-                            {item.title}
-                          </Typography>
-                        </Stack>
-                        <Stack sx={{ gap: { xs: 2, md: 3 }, pb: boxPadding }}>
-                          <Stack sx={{ gap: 0.5 }}>
-                            <Typography variant="h4">{item.title2}</Typography>
-                            {item.description && <Typography sx={{ color: 'text.secondary' }}>{item.description}</Typography>}
+
+                  {/* Text Card */}
+                  <Grid item xs={12} md={7}>
+                    <GraphicsCard sx={{ height: '100%' }}>
+                      <Stack sx={{ p: boxPadding, justifyContent: 'space-between', height: '100%' }}>
+                        <Box>
+                          <Stack direction="row" alignItems="center" spacing={1}>
+                            <SvgIcon {...(typeof item.icon === 'string' ? { name: item.icon } : item.icon)} size={20} stroke={2} color="text.primary" />
+                            <Typography variant="h6">{item.title}</Typography>
                           </Stack>
-                          {item.list && (
-                            <Grid container spacing={{ xs: 0.75, md: 1 }}>
-                              {item.list.map((list, index) => (
-                                <Grid key={index} size={{ xs: 12, md: 6 }}>
-                                  <Stack
-                                    direction="row"
-                                    sx={{
-                                      gap: 0.5,
-                                      alignItems: 'center',
-                                      '& svg.tabler-rosette-discount-check': { width: { xs: 16, md: 24 }, height: { xs: 16, md: 24 } }
-                                    }}
-                                  >
-                                    <SvgIcon name="tabler-rosette-discount-check" stroke={1} color="text.secondary" />
-                                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                                      {list.primary}
-                                    </Typography>
-                                  </Stack>
-                                </Grid>
-                              ))}
-                            </Grid>
+                          {item.text && (
+                            <Typography variant="subtitle1" color="text.secondary" sx={{ mt: 1 }}>
+                              {item.text}
+                            </Typography>
                           )}
-                        </Stack>
+                        </Box>
+
+                        {(item.actionBtn2 || item.actionBtn) && (
+                          <GraphicsCard sx={{ bgcolor: 'grey.200' }}>
+                            <Stack direction="row" spacing={1.5} sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
+                              {item.actionBtn2 && <Button variant="outlined" color="primary" startIcon={<SvgIcon name="tabler-help" size={16} stroke={3} />} {...item.actionBtn2} />}
+                              {item.actionBtn && <Button variant="contained" color="primary" startIcon={<SvgIcon name="tabler-link" size={16} stroke={3} color="background.default" />} {...item.actionBtn} />}
+                            </Stack>
+                          </GraphicsCard>
+                        )}
                       </Stack>
-                      {(item.actionBtn || item.actionBtn2) && (
-                        <GraphicsCard sx={{ bgcolor: 'grey.200' }}>
-                          <Stack direction="row" sx={{ alignItems: 'flex-start', gap: 1.5, p: { xs: 2, sm: 3, md: 4 } }}>
-                            {item.actionBtn2 && (
-                              <Button
-                                variant="outlined"
-                                color="primary"
-                                startIcon={<SvgIcon name="tabler-help" size={16} stroke={3} />}
-                                {...item.actionBtn2}
-                              />
-                            )}
-                            {item.actionBtn && (
-                              <Button
-                                variant="contained"
-                                color="primary"
-                                startIcon={<SvgIcon name="tabler-link" size={16} stroke={3} color="background.default" />}
-                                {...item.actionBtn}
-                              />
-                            )}
-                          </Stack>
-                        </GraphicsCard>
-                      )}
                     </GraphicsCard>
                   </Grid>
                 </Grid>
@@ -195,9 +121,22 @@ export default function Feature18({ heading, caption, topics }) {
             ))}
           </TabContext>
         </Stack>
-      </Stack>
+      </Box>
     </ContainerWrapper>
   );
 }
 
-Feature18.propTypes = { heading: PropTypes.string, caption: PropTypes.string, topics: PropTypes.array };
+Feature18.propTypes = {
+  heading: PropTypes.string,
+  caption: PropTypes.string,
+  topics: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+      title: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      text: PropTypes.string,
+      actionBtn: PropTypes.object,
+      actionBtn2: PropTypes.object
+    })
+  )
+};

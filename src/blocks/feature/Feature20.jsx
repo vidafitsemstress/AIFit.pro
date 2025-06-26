@@ -168,6 +168,19 @@ export default function Feature20({ heading, caption, image, features, actionBtn
             }}
           >
             <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'center', gap: 1.5 }}>
+              {actionBtn && (
+                <ButtonAnimationWrapper>
+                  <Button
+                    variant="contained"
+                    {...actionBtn}
+                    sx={{
+                      fontFamily: 'Montserrat, sans-serif',
+                      fontWeight: 'bold',
+                      ...(actionBtn.sx || {})
+                    }}
+                  />
+                </ButtonAnimationWrapper>
+              )}
               {secondaryBtn && (
                 <ButtonAnimationWrapper>
                   <Button variant="outlined" {...secondaryBtn} />
