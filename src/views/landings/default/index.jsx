@@ -9,11 +9,9 @@ import useDataThemeMode from '@/hooks/useDataThemeMode';
 // @data
 import {
   benefit,
-  cta5,
   faq,
   feature20,
   feature18,
-  feature21,
   hero,
   integration,
   pricing
@@ -29,18 +27,12 @@ export default function Main() {
       <Hero17 {...hero} />
       <Feature20 {...feature20} />
 
-
       <LazySection
         sections={[
           {
             importFunc: () =>
               import('@/blocks/feature').then((module) => ({ default: module.Feature18 })),
             props: feature18
-          },
-          {
-            importFunc: () =>
-              import('@/blocks/feature').then((module) => ({ default: module.Feature21 })),
-            props: feature21
           }
         ]}
         offset="200px"
@@ -59,11 +51,6 @@ export default function Main() {
 
       <LazySection
         sections={[
-          {
-            importFunc: () =>
-              import('@/blocks/cta').then((module) => ({ default: module.Cta5 })),
-            props: cta5
-          },
           {
             importFunc: () =>
               import('@/blocks/faq').then((module) => ({ default: module.Faq6 })),

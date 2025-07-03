@@ -222,18 +222,67 @@ export const feature23 = {
   primaryBtn: { children: 'Junte-se a nós', href: '#' }
 };
 
+ 
 // ===================== Painel Administrativo =====================
 export const feature18 = {
   heading: 'Administre clientes ponta a ponta',
   caption: 'Com o painel da AIFit.pro, gerencie cada etapa do atendimento de forma centralizada e escalável.',
   topics: [
-{ icon: 'tabler-users', title: 'Gestão de Clientes', image: '/assets/images/graphics/default/admin-dashboard.png' },
-{ icon: 'tabler-dumbbell', title: 'Treinos via IA', image: '/assets/images/graphics/default/admin-dashboard-2.png' },
-{ icon: 'tabler-bowl-food', title: 'Dietas via IA', image: '/assets/images/graphics/default/admin-dashboard-3.png' },
-{ icon: 'tabler-file-text', title: 'Protocolos personalizados', image: '/assets/images/graphics/default/admin-dashboard-4.png' },
-{ icon: 'tabler-chart-line', title: 'Controle de Performance dos Clientes', image: '/assets/images/graphics/default/admin-dashboard-5.png' },
-{ icon: 'tabler-send', title: 'Envio automático dos protocolos', image: '/assets/images/graphics/default/admin-dashboard-6.png' },
-{ icon: 'tabler-message-circle', title: 'Chatbot', image: '/assets/images/graphics/default/admin-dashboard-7.png' },
-{ icon: 'tabler-brand-whatsapp', title: 'WhatsApp', image: '/assets/images/graphics/default/admin-dashboard-8.png' }
+    {
+      icon: 'tabler-users',
+      title: 'Gestão de Clientes',
+      text: 'Centralize perfis, histórico e métricas de todos os clientes em uma visão unificada.',
+      image: '/assets/images/graphics/default/admin-dashboard.png',
+      actionBtn: { children: 'Acessar Clientes', href: ADMIN_PATH, ...linkProps }
+    },
+    {
+      icon: 'tabler-dumbbell',
+      title: 'Treinos via IA',
+      text: 'Gere treinos personalizados automaticamente com base nos dados do cliente e objetivos específicos.',
+      image: '/assets/images/graphics/default/admin-dashboard-2.png',
+      actionBtn: { children: 'Criar Treino', href: ADMIN_PATH, ...linkProps }
+    },
+    {
+      icon: 'tabler-bowl-food',
+      title: 'Dietas via IA',
+      text: 'Crie planos alimentares seguros e eficazes com recomendações nutricionais geradas por IA.',
+      image: '/assets/images/graphics/default/admin-dashboard-3.png',
+      actionBtn: { children: 'Criar Dieta', href: ADMIN_PATH, ...linkProps }
+    },
+    {
+      icon: 'tabler-file-text',
+      title: 'Protocolos Personalizados',
+      text: 'Elabore protocolos sob medida para tratamentos, suplementos ou orientações específicas.',
+      image: '/assets/images/graphics/default/admin-dashboard-4.png',
+      actionBtn: { children: 'Montar Protocolo', href: DOCS_URL, ...linkProps }
+    },
+    {
+      icon: 'tabler-chart-line',
+      title: 'Controle de Performance Dos Clientes',
+      text: 'Acompanhe evolução corporal, desempenho e adesão em gráficos e relatórios detalhados.',
+      image: '/assets/images/graphics/default/admin-dashboard-5.png',
+      actionBtn: { children: 'Ver Relatórios', href: SECTION_PATH, ...linkProps }
+    },
+    {
+      icon: 'tabler-send',
+      title: 'Envio Automático Dos Protocolos',
+      text: 'Envie planos e protocolos automaticamente via WhatsApp ou email para seus clientes.',
+      image: '/assets/images/graphics/default/admin-dashboard-6.png',
+      actionBtn: { children: 'Configurar Envio', href: SECTION_PATH, ...linkProps }
+    },
+    {
+      icon: 'tabler-message-circle',
+      title: 'Chatbot',
+      text: 'Interaja com seus clientes via chatbot para esclarecimento de dúvidas e suporte em tempo real.',
+      image: '/assets/images/graphics/default/admin-dashboard-7.png',
+      actionBtn: { children: 'Abrir Chat', href: SECTION_PATH, ...linkProps }
+    },
+    {
+      icon: 'tabler-brand-whatsapp',
+      title: 'WhatsApp',
+      text: 'Integração completa com WhatsApp para envio de mensagens, lembretes e materiais em PDF.',
+      image: '/assets/images/graphics/default/admin-dashboard-8.png',
+      actionBtn: { children: 'Enviar WhatsApp', href: SECTION_PATH, ...linkProps }
+    }
   ]
 };

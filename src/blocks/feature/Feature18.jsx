@@ -49,6 +49,12 @@ export default function Feature18({ heading, caption, topics }) {
                 <TabList
                   onChange={handleChange}
                   variant="scrollable"
+                  TabScrollButtonProps={{
+                    sx: {
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                    }
+                  }}
                   sx={{ '& .MuiTabs-indicator': { display: 'none' }, minHeight: 'unset', p: 0.25 }}
                 >
                   {topics.map((item, idx) => (
