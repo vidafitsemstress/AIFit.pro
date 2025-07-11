@@ -76,7 +76,7 @@ export const feature5 = {
 export const feature20 = {
   heading: 'Tudo que você precisa em apenas uma plataforma',
   caption: 'Pronto para escalar seus atendimentos de forma hiperpersonalizada?',
-  actionBtn: { children: 'Adquira Agora!', href: BUY_NOW_URL, ...linkProps },
+actionBtn: { children: 'Adquira Agora!', href: '#precos' },
   features: [
     {
       icon: 'tabler-accessible',

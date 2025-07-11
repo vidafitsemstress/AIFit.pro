@@ -24,9 +24,7 @@ export const hero = {
     <Button
       variant="contained"
       component="a"
-      href="https://www.aifit.pro"
-      target="_blank"
-      rel="noopener noreferrer"
+href="#precos"
       sx={{
         mt: 2,
         fontFamily: 'Montserrat, sans-serif',

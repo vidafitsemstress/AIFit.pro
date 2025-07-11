@@ -8,7 +8,7 @@ export const integration = {
   primaryBtn: {
     children: 'Adquire Agora!',
     startIcon: <SvgIcon name="tabler-help" color="background.default" />,
-    href: DOCS_URL,
+href: '#precos',
     target: '_blank',
     rel: 'noopener noreferrer'
   },

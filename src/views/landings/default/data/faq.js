@@ -88,8 +88,8 @@ export const faq = {
       category: 'Funcionalidades & Atrações'
     }
   ],
-  getInTouch: {
-    link: { children: 'Adquire Agora!', href: branding.company.socialLink.support, target: '_blank', rel: 'noopener noreferrer' }
+getInTouch: {
+    link: { children: 'Adquire Agora!', href: '#precos', target: '_blank', rel: 'noopener noreferrer' }
   },
   categories: ['Gerais', 'Preços e Licenças', 'Funcionalidades & Atrações'],
   activeCategory: 'Gerais'

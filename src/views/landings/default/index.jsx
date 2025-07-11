@@ -38,16 +38,18 @@ export default function Main() {
         offset="200px"
       />
 
-      <LazySection
-        sections={[
-          {
-            importFunc: () =>
-              import('@/blocks/pricing').then((module) => ({ default: module.Pricing9 })),
-            props: pricing
-          }
-        ]}
-        offset="200px"
-      />
+      <div id="precos">
+        <LazySection
+          sections={[
+            {
+              importFunc: () =>
+                import('@/blocks/pricing').then((module) => ({ default: module.Pricing9 })),
+              props: pricing
+            }
+          ]}
+          offset="200px"
+        />
+      </div>
 
       <LazySection
         sections={[

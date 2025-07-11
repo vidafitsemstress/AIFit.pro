@@ -23,8 +23,16 @@ export const navbar = {
   },
   primaryBtn: {
     children: 'Adquira agora!',
-    href: BUY_NOW_URL,
-    ...linkProps
+    onClick: () => {
+      const el = document.getElementById('precos');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    },
+    variant: 'contained',
+    color: 'primary',
+    sx: {
+      fontFamily: 'Montserrat, sans-serif',
+      fontWeight: 'bold'
+    }
   },
   navItems: [
     // substituído Home por Como Funciona

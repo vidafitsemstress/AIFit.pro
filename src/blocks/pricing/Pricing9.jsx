@@ -34,7 +34,8 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 export default function Pricing9({ heading, caption, features, plans }) {
   const theme = useTheme();
 
-  return (
+return (
+  <Box id="precos">
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
       <Stack sx={{ gap: { xs: 6 } }}>
         {heading && (
@@ -166,6 +167,7 @@ export default function Pricing9({ heading, caption, features, plans }) {
         </Grid>
       </Stack>
     </ContainerWrapper>
+  </Box>
   );
 }
 
