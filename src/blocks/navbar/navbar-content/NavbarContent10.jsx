@@ -19,6 +19,8 @@ import {
   NavPrimaryButton,
   NavSecondaryButton
 } from '@/components/navbar';
+import Button from '@mui/material/Button';
+import NextLink from 'next/link';
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import SvgIcon from '@/components/SvgIcon';
@@ -37,7 +39,7 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
           component="nav"
           direction="row"
           alignItems="center"
-          justifyContent="center"
+          justifyContent={downSM ? 'space-between' : 'center'}
           sx={{
             position: 'fixed',
             top: 0,
@@ -80,14 +82,22 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
               <>
                 <NavSecondaryButton {...secondaryBtn} />
                 <ButtonAnimationWrapper>
-                  <NavPrimaryButton {...primaryBtn} />
+                  <NavPrimaryButton
+                    {...primaryBtn}
+                    sx={{
+                      backgroundColor: 'primary.main',
+                      color: 'common.white',
+                      boxShadow: '0 0 16px rgba(0,0,0,0.3)',
+                      borderRadius: '24px'
+                    }}
+                  />
                 </ButtonAnimationWrapper>
               </>
             ) : (
               <MenuPopper
                 offset={12}
                 toggleProps={{
-                  children: <SvgIcon name="tabler-menu-2" color="text.primary" />,  
+                  children: <SvgIcon name="tabler-menu-2" color="text.primary" />,
                   color: 'inherit',
                   sx: { width: 36, height: 36 }
                 }}

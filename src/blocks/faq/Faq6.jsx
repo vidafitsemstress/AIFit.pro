@@ -32,7 +32,7 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  FAQ - 6  ***************************/
 
-export default function Faq6({ heading, caption, defaultExpanded, faqList, getInTouch, categories, activeCategory }) {
+export default function Faq6({ heading, caption, defaultExpanded, faqList, getInTouch = {}, categories, activeCategory }) {
   const theme = useTheme();
   const isFocusWithin = useFocusWithin();
   const [expanded, setExpanded] = useState(defaultExpanded || false);
@@ -73,15 +73,23 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
         >
           <Stack direction={{ sm: 'row' }} sx={{ gap: 4, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'end' } }}>
             <Typeset {...{ heading, caption }} />
-            <ButtonAnimationWrapper>
-              <Button
+            {getInTouch.link && (
+              <ButtonAnimationWrapper>
+<Button
                 variant="contained"
                 size="large"
                 {...getInTouch.link}
                 {...(getInTouch.link && getInTouch.link.href && { component: NextLink })}
-                sx={{ minWidth: 215 }}
+                sx={{
+                  minWidth: 215,
+                  backgroundColor: 'primary.main',
+                  color: 'common.white',
+                  boxShadow: '0 0 16px rgba(0,0,0,0.3)',
+                  borderRadius: '24px'
+                }}
               />
-            </ButtonAnimationWrapper>
+              </ButtonAnimationWrapper>
+            )}
           </Stack>
         </motion.div>
         <Stack sx={{ gap: 2 }}>

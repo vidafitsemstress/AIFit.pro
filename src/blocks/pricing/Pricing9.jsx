@@ -70,11 +70,11 @@ return (
                             {plan.title}
                           </Typography>
                           <Stack>
-                            <Typography component="div" variant="h1">
+<Typography component="div" variant="h1" sx={{ fontFamily: 'Montserrat, sans-serif' }}>
                               {plan.offerPrice && plan.offerPrice > 0 ? plan.offerPrice : plan.price}
                             </Typography>
                             {!!(plan.offerPrice && plan.offerPrice > 0) && (
-                              <Typography variant="h3" sx={{ color: 'grey.700', textDecoration: 'line-through' }}>
+                              <Typography variant="h3" sx={{ color: 'grey.500', textDecoration: 'line-through' }}>
                                 {plan.price}
                               </Typography>
                             )}
@@ -107,19 +107,19 @@ return (
 
                               return (
                                 <Stack key={item.id} direction="row" sx={{ gap: 1.25, alignItems: 'center' }}>
-                                  <Avatar sx={{ bgcolor: 'grey.100', width: 24, height: 24 }}>
+                                  <Avatar sx={{ bgcolor: 'grey.100', width: 28, height: 28 }}>
                                     <SvgIcon
                                       name={plan.featuresID.includes(item.id) ? 'tabler-check' : 'tabler-x'}
                                       type={IconType.STROKE}
                                       size={16}
-                                      twoToneColor={theme.palette.grey[100]}
-                                      color={plan.featuresID.includes(item.id) ? 'secondary.darker' : 'text.secondary'}
+twoToneColor={theme.palette.grey[100]}
+                                      color="#1f8b9c"
                                       stroke={2}
                                     />
                                   </Avatar>
                                   <Typography
                                     variant={plan.featuresID.includes(item.id) ? 'subtitle1' : 'body1'}
-                                    sx={{ color: plan.featuresID.includes(item.id) ? 'secondary.darker' : 'text.secondary' }}
+sx={{ color: '#1f8b9c' }}
                                   >
                                     {item.label}
                                   </Typography>

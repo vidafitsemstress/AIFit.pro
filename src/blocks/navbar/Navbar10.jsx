@@ -36,7 +36,6 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 /***************************  NAVBAR - 10  ***************************/
-
 export default function Navbar10({ children }) {
   return (
     <>
@@ -48,7 +47,8 @@ export default function Navbar10({ children }) {
           background: 'transparent',
           top: 0,
           left: 0,
-          right: 0, fontWeight: 'bold', 
+          right: 0,
+          fontWeight: 'bold',
           zIndex: (theme) => theme.zIndex.appBar
         }}
       >

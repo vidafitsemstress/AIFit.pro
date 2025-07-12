@@ -20,15 +20,19 @@ export const hero = {
   captionLine:
     'Automatize seu atendimento, escale seu serviço e entregue protocolos com a sua identidade, em segundos.',
 
-  primaryBtn: (
+primaryBtn: (
     <Button
       variant="contained"
       component="a"
-href="#precos"
-      sx={{
+      href="#precos"
+sx={{
         mt: 2,
         fontFamily: 'Montserrat, sans-serif',
         fontWeight: 'bold',
+        backgroundColor: 'primary.main',
+        color: 'common.white',
+        boxShadow: '0 0 16px rgba(0,0,0,0.3)',
+        borderRadius: '24px',
       }}
     >
       Adquira Agora!
